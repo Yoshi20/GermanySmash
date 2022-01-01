@@ -33,10 +33,7 @@ namespace :results_crawler do
   desc "Find and create past external tournaments from braacket.com"
   task createTournaments: :environment do
     links = [
-      # blup
-      # 'https://braacket.com/league/ALLOFTHEM/tournament?rows=200',
-      # 'https://braacket.com/league/ALLOFTHEM/tournament?rows=200&page=2',
-      # 'https://braacket.com/league/SSBUCHPRs/tournament?rows=200'
+      'https://braacket.com/league/SSBUDEPRs/tournament?rows=200'
     ]
     links.each do |link|
       puts "\nCrawling #{link}..."
