@@ -16,7 +16,7 @@ module TournamentsHelper
       "Frismash", "Full House", "HeroFest", "Japan Impact", "Orcus Smash",
       "PK Bern", "Polymanga", "Qwertz", "Röstinament", "Saint Smash",
       "Smash Castle", "Smash Club", "Smash Hammered", "SNWC", "SoluSmash",
-      "SwissGeek", "UltiBaits", "UltiMelt", "UltiMon", "University of Smash"]
+      "GermanyGeek", "UltiBaits", "UltiMelt", "UltiMon", "University of Smash"]
   end
 
   def valid_challonge_url(str)

@@ -10,16 +10,16 @@ module PlayerHelper
       scope: 'defines.tournament_experiences')
   end
 
-  def cantons_raw
-    ['aargau', 'appenzell_ausserrhoden', 'appenzell_innerrhoden', 'basel-land', 'basel-stadt', 'bern', 'freiburg', 'genf', 'glarus', 'graubünden', 'jura', 'luzern', 'neuenburg', 'nidwalden', 'obwalden', 'schaffhausen', 'schwyz', 'solothurn', 'st_gallen', 'tessin', 'thurgau', 'uri', 'waadt', 'wallis', 'zug', 'zürich']
+  def federal_states_raw
+    ['BB', 'BE', 'BW', 'BY', 'HB', 'HE', 'HH', 'MV', 'NI', 'NW', 'RP', 'SH', 'SL', 'SN', 'ST', 'TH']
   end
 
-  def cantons
-    t(cantons_raw, scope: 'defines.cantons')
+  def federal_states
+    t(federal_states_raw, scope: 'defines.federal_states')
   end
 
-  def cantons_for_select
-    cantons.zip(cantons_raw)
+  def federal_states_for_select
+    federal_states.zip(federal_states_raw)
   end
 
   def genders_raw
@@ -43,14 +43,6 @@ module PlayerHelper
     players.sort_by do |p|
       [p.seed_points, -p.created_at.to_i]
     end.reverse
-  end
-
-  def top_players_s1_19
-    ['Destany', 'DeepFreeze', 'Smuff', 'Severe Calamari', 'Benji', 'Crash', 'Kepler', 'CrzyShroom', 'Sylph', 'Olivia', 'Ryuji', 'Zudenka', 'SickBoy', 'Phonky', 'Radiance', 'Godoh', 'Jesuischoq', 'ItseMePG', 'TunaLink', 'Acsor', 'Rampage', 'N3rthus', 'TheBlerton', 'Fr0zen', 'Karpador64']
-  end
-
-  def top_players_s2_19
-    ['Destany', 'Karpador64', 'Crash', 'Phonky', 'DeepFreeze', 'Olivia', 'Kepler', 'SickBoy', 'Jaka', 'ItseMePG', 'Benji', 'Purist', 'Acsor', 'Rampage', 'Yannwatts']
   end
 
   def top_players_s12_21

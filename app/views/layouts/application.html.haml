@@ -3,13 +3,13 @@
 
   %head
     - if @section.present?
-      %title= "SwissSmash.ch | #{@section.capitalize}"
+      %title= "GermanySmash.de | #{@section.capitalize}"
     - else
-      %title= "SwissSmash.ch"
+      %title= "germanysmash.de"
     = display_meta_tags(default_meta_tags)
     %meta{:charset => "utf-8"}
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
-    = favicon_link_tag 'favicon.ico'
+    = favicon_link_tag 'logo.webp'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = render '/layouts/google_analytics'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
@@ -47,16 +47,13 @@
             .row
               .col
                 %p.small
-                  = link_to t('feedback_and_questions'), :feedbacks
-              .col
-                %p.small
                   = link_to t('navigation.footer.administrators_short'), :administrators
               .col
                 %p.small
-                  = mail_to 'admin@swisssmash.ch', t('navigation.footer.contact'), subject: t('navigation.footer.mail_subject'), body: t('navigation.footer.mail_body')
+                  = mail_to 'admin@germanysmash.de', t('navigation.footer.contact'), subject: t('navigation.footer.mail_subject'), body: t('navigation.footer.mail_body')
           .col-2
             = button_tag '', title: 'Go to top', style: 'background-color: #222; border: none;', class: 'scroll-top' do
-              = image_tag('logo.png', class: 'swisssmash_logo', eight: '50px', width: '50px')
+              = image_tag('logo.webp', class: 'germanysmash_logo', eight: '50px', width: '50px')
           .col-5
             .row
               .col
@@ -67,7 +64,7 @@
                   = link_to t('navigation.footer.privacy_policy'), :privacy_policy
               .col
                 %p#donate-btn
-                  = link_to("https://paypal.me/swisssmash", target: '_blank', class: "btn btn-sstm") do
+                  = link_to("https://paypal.me/germanysmash", target: '_blank', class: "btn btn-sstm") do
                     = t('please_donate')
                     = image_tag('paypal_icon.png', class: 'paypal', height: '30px', width: '30px')
 

@@ -65,21 +65,21 @@ module ApplicationHelper
     {
       reverse: true,
       separator: '|',
-      description: 'Swiss Super Smash Brothers E-Sports Community',
+      description: 'Germany Super Smash Brothers E-Sports Community',
       keywords: 'super smash brothers, nintendo, e-sports',
       canonical: request.original_url,
       noindex: !Rails.env.production?,
       icon: [
-        { href: image_url('favicon.ico') },
-        { href: image_url('icon.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url('logo.webp') },
+        { href: image_url('logo.webp'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
       ],
       og: {
-        site_name: 'swisssmash.ch',
-        title: 'SwissSmash',
-        description: 'Swiss Super Smash Brothers E-Sports Community',
+        site_name: 'germanysmash.de',
+        title: 'GermanySmash',
+        description: 'Germany Super Smash Brothers E-Sports Community',
         type: 'website',
         url: request.original_url,
-        image: image_url('logo.png')
+        image: image_url('logo.webp')
       }
     }
   end

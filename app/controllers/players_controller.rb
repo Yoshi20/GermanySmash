@@ -8,8 +8,8 @@ class PlayersController < ApplicationController
   # GET /players.json
   def index
     if params[:filter].present? && params['filter-data'].present?
-      if params[:filter] == 'canton'
-        @players = Player.where(canton: params['filter-data'])
+      if params[:filter] == 'federal_state'
+        @players = Player.where(federal_state: params['filter-data'])
       elsif params[:filter] == 'character'
         @players = Player.where("? = ANY (main_characters)", params['filter-data'])
       end
@@ -145,7 +145,7 @@ class PlayersController < ApplicationController
     def player_params
       params.require(:player).permit(:gamer_tag, :points, :participations,
         :self_assessment, :tournament_experience, :comment, :best_rank, :wins,
-        :losses, :main_characters, :created_at, :updated_at, :canton, :gender,
+        :losses, :main_characters, :created_at, :updated_at, :federal_state, :gender,
         :birth_year, :prefix, :discord_username, :twitter_username,
         :instagram_username, :youtube_video_ids, :warnings)
     end

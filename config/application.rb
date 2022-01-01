@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module SSBTournamentManager
+module GermanySmash
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
@@ -15,9 +15,9 @@ module SSBTournamentManager
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    config.time_zone = 'Bern'
+    config.time_zone = 'Berlin'
 
-    config.i18n.available_locales = %w(en de fr)
+    config.i18n.available_locales = %w(en de)
 
   end
 end

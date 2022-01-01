@@ -13,7 +13,7 @@ class Calendar
     def full_calendar_event(tournament, current_user)
       # TODO change date to from and to?
       isFullDayEvent = (tournament.date.hour == 0 and tournament.date.min == 0)
-      icon = tournament.canton
+      icon = tournament.federal_state
       {
         title:     tournament.name.to_s,
         start:     tournament.date.try(:iso8601),

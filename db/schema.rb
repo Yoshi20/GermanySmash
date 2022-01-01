@@ -24,16 +24,6 @@ ActiveRecord::Schema.define(version: 2021_12_29_155945) do
     t.index ["player_id"], name: "index_alternative_gamer_tags_on_player_id"
   end
 
-  create_table "feedbacks", force: :cascade do |t|
-    t.bigint "user_id"
-    t.text "text"
-    t.text "response"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "response_username"
-    t.index ["user_id"], name: "index_feedbacks_on_user_id"
-  end
-
   create_table "matches", force: :cascade do |t|
     t.bigint "tournament_id"
     t.bigint "challonge_match_id"
@@ -71,7 +61,7 @@ ActiveRecord::Schema.define(version: 2021_12_29_155945) do
     t.integer "wins"
     t.integer "losses"
     t.string "main_characters", default: [], array: true
-    t.string "canton"
+    t.string "federal_state"
     t.string "gender"
     t.integer "birth_year"
     t.string "prefix"
@@ -161,10 +151,7 @@ ActiveRecord::Schema.define(version: 2021_12_29_155945) do
     t.string "full_name"
     t.string "mobile_number"
     t.string "area_of_responsibility"
-    t.boolean "is_club_member", default: false
-    t.boolean "wants_major_email", default: true
-    t.boolean "wants_weekly_email", default: true
-    t.boolean "allows_emails_from_swisssmash", default: true
+    t.boolean "allows_emails_from_germanysmash", default: true
     t.boolean "allows_emails_from_partners", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -1,6 +1,5 @@
 en:
   login: "Login"
-  feedback_and_questions: "Feedback & Questions"
   please_donate: "Donate"
   username: "Username"
   password: "Password"
@@ -8,8 +7,6 @@ en:
   sign_up: "Sign up"
   w_l: "W/L"
   hi: "Hi"
-  s1_2019: "S1/19"
-  s2_2019: "S2/19"
   s12_2020: "S1&2/20"
   s12_2021: "S1&2/21"
   s12_2022: "S1&2/22"
@@ -40,33 +37,23 @@ en:
       some: "Some"
       a_lot: "A lot"
       very_much: "Very much"
-    cantons:
-      aargau: "Aargau"
-      appenzell_ausserrhoden: "Appenzell Outer Rhodes"
-      appenzell_innerrhoden: "Appenzell Inner Rhodes"
-      basel-land: "Basel-Land"
-      basel-stadt: "Basel-City"
-      bern: "Bern"
-      freiburg: "Friborg"
-      genf: "Geneva"
-      glarus: "Glarus"
-      graubünden: "Graubünden"
-      jura: "Jura"
-      luzern: "Lucerne"
-      neuenburg: "Neuchâtel"
-      nidwalden: "Nidwalden"
-      obwalden: "Obwalden"
-      schaffhausen: "Schaffhausen"
-      schwyz: "Schwyz"
-      solothurn: "Solothurn"
-      st_gallen: "St. Gallen"
-      tessin: "Ticino"
-      thurgau: "Thurgau"
-      uri: "Uri"
-      waadt: "Vaud"
-      wallis: "Valais"
-      zug: "Zug"
-      zürich: "Zurich"
+    federal_states:
+      BB: "Brandenburg"
+      BE: "Berlin"
+      BW: "Baden-Württemberg"
+      BY: "Bavaria"
+      HB: "Bremen"
+      HE: "Hesse"
+      HH: "Hamburg"
+      MV: "Mecklenburg Western Pomerania"
+      NI: "Lower Saxony"
+      NW: "Northrhine-Westphalia"
+      RP: "Rhineland Palatinate"
+      SH: "Schleswig Holstein"
+      SL: "Saarland"
+      SN: "Saxony"
+      ST: "Saxony-Anhalt"
+      TH: "Thuringia"
     genders:
       male: "Male"
       female: "Female"
@@ -105,9 +92,6 @@ en:
       news_created: "News post was successfully created"
       news_updated: "News post was successfully updated"
       news_deleted: "News post was successfully deleted"
-      feedback_created: "Feedback or Question was successfully created"
-      feedback_updated: "Feedback or Question was successfully updated"
-      feedback_deleted: "Feedback or Question was successfully deleted"
       player_updated: "Player was successfully updated"
     alert:
       creating_player: "Creating player failed! You may have selected an already taken gamer tag. Please try again"
@@ -161,22 +145,22 @@ en:
       privacy_policy: "Privacy Policy"
       contact: "Contact"
       mail_subject: "I faced a problem or have a question!"
-      mail_body: "Hi SwissSmash\n\nI'm ??? and I would like to ???"
+      mail_body: "Hi GermanySmash\n\nI'm ??? and I would like to ???"
 
   partials:
     events: "Next Tournaments"
     players:
-      title: "Top Players (2019)"
+      title: "Top Players (2021)"
       player: "Player"
 
   welcome:
-    title: "SwissSmash"
-    body1: "If you want to stay up-to-date with the Swiss Smash Community, join us on %{discord_link} and follow the Swiss Smash %{twitter_link} Account."
+    title: "GermanySmash"
+    body1: "If you want to stay up-to-date with the Germany Smash Community, join us on %{discord_link} and follow the Germany Smash %{twitter_link} Account."
     body2: "You can find the upcoming events in the %{tournaments_link} or in the %{calendar_link}."
-    body3: "%{log_in_link} or %{sign_up_link} if you haven't yet, to be able to join a tournament and write a %{feedbacks_link}."
-    body4: "You can find the official Power Ranking of Switzerland under %{rankings_link}."
-    body5: "Here you can find all %{players_link} registered on SwissSmash and here you can find the %{statistics_link}."
-    body6: "More information about SwissSmash can be found under %{informations_link}."
+    body3: "%{log_in_link} or %{sign_up_link} if you haven't yet, to be able to join a tournament."
+    body4: "You can find the official Power Ranking of Germany under %{rankings_link}."
+    body5: "Here you can find all %{players_link} registered on GermanySmash and here you can find the %{statistics_link}."
+    body6: "More information about GermanySmash can be found under %{informations_link}."
     tournament_list: "Tournaments list"
     calendar: "Calendar"
     log_in: "Log in"
@@ -187,22 +171,21 @@ en:
     title_short: "Infos"
     general:
       title: "General"
-      swisssmash: |
-        This web application/site was primarly created to give an overview over the Super Smash Bros. scene in switzerland and to provide a tournament organizer (TO) a simple tool to manage their tournaments.<br><br>
-        It shall also present an entry point for new players to find their respective local smash community.<br><br>
-        In the meantime it now also provides an almost complete list of swiss smashers with relevant stats, player data and rankings.
+      germanysmash: |
+        This web application/site was primarly created to give an overview over the Super Smash Bros. scene in germany and to provide a tournament organizer (TO) a simple tool to manage their tournaments.<br><br>
+        It shall also present an entry point for new players to find their respective local smash community.
     calendar:
       title: "Calendar"
-      tournaments_body: "With the help of a self written %{link} program, that runs once every night, SwissSmash is able to find and list all the SSBU tournaments in switzerland that were added to either one of the following sites:"
-      calendar_body: "The calendar shows all found SSBU tournaments in switzerland from two weeks ago and four months into the future.\nIt distinguishes between the following tournament types:"
-      calendar_weekly: "Weekly -> On swisssmash.ch created weekly tournament"
-      calendar_internal: "Internal -> On swisssmash.ch created tournament"
+      tournaments_body: "With the help of a self written %{link} program, that runs once every night, GermanySmash is able to find and list all the SSBU tournaments in germany that were added to either one of the following sites:"
+      calendar_body: "The calendar shows all found SSBU tournaments in germany from two weeks ago and four months into the future.\nIt distinguishes between the following tournament types:"
+      calendar_weekly: "Weekly -> On germanysmash.de created weekly tournament"
+      calendar_internal: "Internal -> On germanysmash.de created tournament"
       calendar_external: "External -> On an external site created tournament"
     power_ranking:
       title: "Power Ranking"
       power_ranking: "Power Ranking (PR)"
-      power_ranking_body: "A tournament will be considered an official SwissSmash tournament and will count to the PR when the following requirements will be met:"
-      power_ranking_li_1: "Announced at least 2 weeks before its start date on swisssmash.ch or on the Swiss Smash Discord tournaments channel"
+      power_ranking_body: "A tournament will be considered an official GermanySmash tournament and will count to the PR when the following requirements will be met:"
+      power_ranking_li_1: "Announced at least 2 weeks before its start date on germanysmash.de or on the Germany Smash Discord tournaments channel"
       power_ranking_li_2: "A minimum of 16 attendees"
       power_ranking_li_3: "Reasonable seeding"
       power_ranking_li_4: "Enough lagless setups with decent sitting opportunities"
@@ -211,15 +194,15 @@ en:
     tournament_manager:
       title: "Tournament manager"
       bracket_tool: "Bracket tool"
-      bracket_tool_body: "Because of its free, lagless and easy to use brackets and API, the SwissSmash tournament manager uses %{link} for now."
+      bracket_tool_body: "Because of its free, lagless and easy to use brackets and API, the GermanySmash tournament manager uses %{link} for now."
       tournament_organiser: "Tournament organiser"
-      tournament_organiser_body: "Are you organising tournaments yourself and would like to use the SwissSmash Tournament Manager? Just let me know %{link}."
+      tournament_organiser_body: "Are you organising tournaments yourself and would like to use the GermanySmash Tournament Manager? Just let me know %{link}."
       tournament_organiser_mail: "via email"
       tournament_organiser_mail_subject: "I would like to be an administrator!"
-      tournament_organiser_mail_body: "Hi SwissSmash\n\nI'm ??? and I would like to be an administrator because:\n???"
+      tournament_organiser_mail_body: "Hi GermanySmash\n\nI'm ??? and I would like to be an administrator because:\n???"
     results:
       title: "Results"
-      results_body: "Besides the results (match scores and rankings) of the SwissSmash Tournament Manager internal tournaments, swisssmash.ch is also able to get the results from all other tournaments in switzerland.\nThe only condition is, that the tournament was imported on braacket.com in the %{link} league."
+      results_body: "Besides the results (match scores and rankings) of the GermanySmash Tournament Manager internal tournaments, germanysmash.de is also able to get the results from all other tournaments in germany.\nThe only condition is, that the tournament was imported on braacket.com in the %{link} league."
       ranking_system: "Ranking system"
       ranking_system_body: "Regardless of the number of participants per tournament, the players rank at the end of a tournament decides the amount of points he or she receives."
       ranking_system_rank: "Rank"
@@ -227,11 +210,11 @@ en:
     seeding:
       title: "Seeding"
       seeding: "Bracket seeding"
-      seeding_body1: "The initial seeding is done by generating a player list sorted by skill from all the data on SwissSmash.ch:"
+      seeding_body1: "The initial seeding is done by generating a player list sorted by skill from all the data on germanysmash.de:"
       seeding_body2: "The final seeding is done manually by a TO or his/her representatives."
     personal_data:
       title: "Personal data"
-      personal_data_body: "Based on Article 13 of the Swiss Federal Constitution and the data protection provisions of the Confederation (Data Protection Act, DSG), every person has the right to the protection of his or her privacy and to protection against the misuse of his or her personal data.<br><br>SwissSmash complies with these provisions. Therefore non-player data (such as emails & mobile numer) will be kept strictly confidential and will not be sold to third parties."
+      personal_data_body: "Based on Article 13 of the Germany Federal Constitution and the data protection provisions of the Confederation (Data Protection Act, DSG), every person has the right to the protection of his or her privacy and to protection against the misuse of his or her personal data.<br><br>GermanySmash complies with these provisions. Therefore non-player data (such as emails & mobile numer) will be kept strictly confidential and will not be sold to third parties."
 
   calendar:
     title: "Calendar"
@@ -343,28 +326,6 @@ en:
     created_by: "Created by:"
     no_news_found: "No news found yet"
 
-  feedback:
-    mailer:
-      thanks: "Thanks a lot for your feedback or question."
-      response: "You can check out my response by following %{link}."
-      this_link: "this link"
-      best_regards: "Best regards"
-    text: "Text"
-    admin_replied: "Administrator \"%{user}\" replied:"
-    prohibited: "prohibited this feedback from being saved:"
-    admin_response: "Administrator response"
-    feedback_or_question: "Feedback or Question"
-    title_edit: "Editing feedback or question"
-    let_us_know: "Let us know what you think of our tournaments or homepage and tell us if you're missing something, found a problem or have a question."
-    creat_new: "Create a new feedback or question"
-    log_in_to_create: "Log in to create a new feedback or question"
-    admins: "Administrators"
-    new: "New feedback or question"
-    users_feedback: "%{user}'s feedback or question"
-    someones_feedback: "Someone's feedback or question"
-    updated_at: "Updated at:"
-    created_at: "Created at:"
-
   players:
     title: "Players"
     prohibited: "prohibited this player from being saved:"
@@ -382,7 +343,7 @@ en:
     best_rank: "Best rank"
     wins: "Wins"
     losses: "Losses"
-    canton: "Canton"
+    federal_state: "Canton"
     gender: "Gender"
     birth_year: "Birth year"
     self_assessment: "Self assessment"
@@ -412,10 +373,7 @@ en:
   statistics:
     title: "Statistics"
     title2: "Player statistics"
-    count_total: "Total registered players on SwissSmash"
-    in_2019: "in 2019"
-    in_2020: "in 2020"
-    in_2021: "in 2021"
+    count_total: "Total registered players on GermanySmash"
     in_2022: "in 2022"
     male: "Male"
     female: "Female"
@@ -423,7 +381,7 @@ en:
     youngest: "Youngest"
     mean-age: "Ø age"
     oldest: "Oldest"
-    canton: "Canton"
+    federal_state: "Canton"
     number_of_players: "Number of players"
     character: "Character"
 
@@ -434,18 +392,8 @@ en:
     filter:
       overall: "Overall"
       seed_points: "Seed points"
-      note: "(Note: Only on SwissSmash registered players will appear in these rankings)"
+      note: "(Note: Only on GermanySmash registered players will appear in these rankings)"
     no_players_found: "No players found yet"
-    s1_19:
-      title: "Season 1 2019"
-      top10: "Top 10:"
-      counted_tournaments: "Counted tournaments:"
-      considered_tournaments: "Considered but deemed ineligible:"
-    s2_19:
-      title: "Season 2 2019"
-      top15: "Top 15:"
-      counted_tournaments: "Counted tournaments:"
-      considered_tournaments: "Considered but deemed ineligible:"
     s1_20:
       title: "Season 1&2 2020"
       no_ranking: "Due to COVID-19, there is no 2020 ranking"
@@ -479,9 +427,8 @@ en:
     match_rules:
       title_short: "Rulesets"
       title: "SSBU match rules (Rulesets)"
-      body: "For now the Dutch or the Mirakuru ruleset is used in most of the official Swiss tournaments"
+      body: "For now the Dutch ruleset is used in most of the official tournaments in Germany"
       overview_dutch: "Overview Dutch ruleset:"
-      overview: "Overview Mirakuru ruleset:"
       li1: "1 vs. 1"
       li2: "Best of 3 (Final matches: Best of 5)"
       li3: "3 stocks per game"
@@ -490,15 +437,13 @@ en:
       li6: "Pause: Off"
       li7: "Stage hazards: Off"
       li8: "The winner of a match is obligated to report the results to an administrator"
-      complete_mirakuru: "The complete ruleset can be found"
-      here: "here"
 
   tournaments:
     title: "Tournaments"
     mailer:
-      new_external: "A new external tournament was added to the SwissSmash Tournament Manager."
-      new_tournament: "A new tournament was added to the SwissSmash Tournament Manager."
-      new_weekly: "One or more weeklies were added to the SwissSmash Tournament Manager. Here are the data of the first:"
+      new_external: "A new external tournament was added to the GermanySmash Tournament Manager."
+      new_tournament: "A new tournament was added to the GermanySmash Tournament Manager."
+      new_weekly: "One or more weeklies were added to the GermanySmash Tournament Manager. Here are the data of the first:"
       too_few_registrations: "Because of too few registrations or other reasons, an administrator has cancelled the tournament \"<strong>%{tournament}</strong>\"."
       player_left_tournament: "Since a player just left the tournament and you were first in line in the waiting list, you are now registered in this tournament."
       name: "Name:"
@@ -572,8 +517,8 @@ en:
     new:
       title: "New tournament"
       body: "You can create either an internal, an external or one or more weekly tournaments."
-      li1: "Internal tournaments are supporting all the SwissSmash Tournament Manager functionalitly"
-      li2: "External tournaments are used to link a different registration website with the SwissSmash Tournament Manager"
+      li1: "Internal tournaments are supporting all the GermanySmash Tournament Manager functionalitly"
+      li2: "External tournaments are used to link a different registration website with the GermanySmash Tournament Manager"
       li3: "Weeklies are the same as internal tournaments. But you can create multiple tournaments at once by setting an end date.
         The weeklies name will be generated from the defined city and date to e.g: 'SSBU Weekly Bern KW20 2020'"
     details: "Details"
@@ -590,7 +535,7 @@ en:
     log_in_to_join: ">>> Log in to be able to join this tournament <<<"
     bracket: "Bracket"
     no_players_joined: "No player has joined this tournament yet"
-    canton: "Canton"
+    federal_state: "Canton"
     fee_paid: "Fee paid?"
     brings: "Brings"
     brought: "Brought"
@@ -631,7 +576,7 @@ en:
 
   users:
     mailer:
-      welcome: "Welcome to the SwissSmash Tournament Manager"
+      welcome: "Welcome to the GermanySmash Tournament Manager"
       signed_up: "You have successfully signed up. Your username is:"
       to_join: "To join some tournaments, just follow %{link}."
       to_join2: "To join some tournaments, just follow this link:"
@@ -651,8 +596,8 @@ en:
     challonge_api_key: "Challonge api key (%{link})"
     wants_major_email: "Inform me when a major tournament was added"
     wants_weekly_email: "Inform me when a weekly tournament was added"
-    allows_emails_from_swisssmash: "I agree that SwissSmash sends me emails about important community topics & big tournament announcements from time to time"
-    allows_emails_from_partners: "I agree that partners of SwissSmash send me emails from time to time"
+    allows_emails_from_germanysmash: "I agree that GermanySmash sends me emails about important community topics & big tournament announcements from time to time"
+    allows_emails_from_partners: "I agree that partners of GermanySmash send me emails from time to time"
     current_password: "Current password"
     enter_current_password: "(enter your current password to confirm the changes)"
     delete_my_account: "Delete my account"

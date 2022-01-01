@@ -1,5 +1,5 @@
-# SSB-Tournament-Manager
-Simple tournament manager for Super Smash Bros. matches (Ruby on Rails project)
+# GermanySmash
+Germany Super Smash Bros community tool & simple tournament manager (Ruby on Rails project)
 
 Local commands:
 - bundle update
@@ -8,11 +8,11 @@ Local commands:
 - rails s
 - rails c
 
-- dropdb ssb-tournament-manager_development
-- heroku pg:pull \<postgresql-name\> ssb-tournament-manager_development --app ssb-tournament-manager
+- dropdb germanysmash_development
+- heroku pg:pull \<postgresql-name\> germanysmash_development --app germanysmash
 
-- heroku pg:reset --app ssb-tournament-manager-stage --confirm ssb-tournament-manager-stage
-- heroku pg:push ssb-tournament-manager_development \<postgresql-name\> --app ssb-tournament-manager-stage
+- heroku pg:reset --app germanysmash-stage --confirm germanysmash-stage
+- heroku pg:push germanysmash_development \<postgresql-name\> --app germanysmash-stage
 
 Stage commands:
 - git push stage master
@@ -38,18 +38,14 @@ Prod commands:
 - heroku run rake "utils:remove_player_from_finished_tournament[<t_id>,<p_id>]" --remote prod
 
 General links:
-- https://ssb-tournament-manager.herokuapp.com
-- https://www.ssb-club-bern.ch
-- https://www.swisssmash.ch
+- https://germanysmash.herokuapp.com
+- https://www.germanysmash.de
+- https://www.smashgermany.de
 - https://challonge.com
-- http://sac-bern.ch
-- https://braacket.com/league/ALLOFTHEM/tournament?rows=200
-- https://braacket.com/league/SSBUCHPRs/tournament?rows=200
 
 Tournaments crawler links:
 - https://smash.gg/tournaments?per_page=100&filter={%22upcoming%22%3Atrue%2C%22videogameIds%22%3A0%2C%22countryCode%22%3A%22CH%22}
 - https://braacket.com/tournament/search?rows=100&country=ch&game=ssbu&status=1
-- https://www.toornament.com/tournaments/?q[discipline]=supersmashbros_ultimate&q[platform]=nintendo_switch&q[type]=upcoming
 
 Icons:
 - https://www.ssbwiki.com/Category:Head_icons_(SSBU)
@@ -58,4 +54,4 @@ Banner:
 - https://www.ssbwiki.com/Super_Smash_Bros._Ultimate
 
 Google Analytics:
-- https://analytics.google.com/analytics/web/#/report-home/a145089919w206718824p199562205
+<!-- blup: - https://analytics.google.com/analytics/web/#/report-home/a145089919w206718824p199562205 -->

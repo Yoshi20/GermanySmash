@@ -19,10 +19,9 @@ class ApplicationController < ActionController::Base
     #new
     added_attrs = [:username, :email, :password, :password_confirmation,
       :remember_me, :challonge_username, :challonge_api_key, :full_name,
-      :mobile_number, :area_of_responsibility, :is_club_member,
-      :wants_major_email, :wants_weekly_email, :canton, :gender, :birth_year,
-      :prefix, :discord_username, :twitter_username, :instagram_username,
-      :youtube_video_ids, :allows_emails_from_swisssmash,
+      :mobile_number, :area_of_responsibility, :federal_state, :gender,
+      :birth_year, :prefix, :discord_username, :twitter_username,
+      :instagram_username, :youtube_video_ids, :allows_emails_from_germanysmash,
       :allows_emails_from_partners]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs

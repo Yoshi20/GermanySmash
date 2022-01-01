@@ -1,4 +1,4 @@
-- set_meta_tags description: 'Swiss Smash Users'
+- set_meta_tags description: 'Germany Smash Users'
 
 .row
   .col
@@ -18,7 +18,7 @@
       - mail_string = ''
       - User.where(is_admin: true).each do |u|
         - mail_string = mail_string + u.email + '; '
-      = mail_to "", "Write all admins an email", bcc: mail_string, subject: "SwissSmash", body: "Hi SwissSmash admins\n\n", class: 'btn btn-ghost'
+      = mail_to "", "Write all admins an email", bcc: mail_string, subject: "GermanySmash", body: "Hi GermanySmash admins\n\n", class: 'btn btn-ghost'
 
 .user-list
   %table.table.table-hover.table-borderless
@@ -27,7 +27,6 @@
         %th Username
         %th Last Log in at
         %th.text-center.d-none.d-md-table-cell.d-lg-none.d-xl-table-cell Log in counter
-        %th.text-center.d-none.d-md-table-cell.d-lg-none.d-xl-table-cell Club member
         %th.text-center Admin
         %th.text-center Super Admin
 
@@ -37,9 +36,6 @@
           %td= user.username
           %td= user.current_sign_in_at.to_s(:custom_datetime)
           %td.text-center.d-none.d-md-table-cell.d-lg-none.d-xl-table-cell= user.sign_in_count
-          %td.text-center.d-none.d-md-table-cell.d-lg-none.d-xl-table-cell
-            - if user.is_club_member
-              .material-icons= 'done'
           %td.text-center
             - if user.admin?
               .material-icons= 'done'
@@ -49,12 +45,6 @@
 
           - if current_user.present? and current_user.super_admin?
             %td.admin-list-actions
-              .admin-list-actions__link
-                = form_for user, role: 'form', method: :patch do |f|
-                  = f.check_box :is_club_member, checked: !user.is_club_member, class: 'd-none'
-                  = f.button type: 'submit', data: { confirm: 'Are you sure?' }, class:'btn btn-ghost btn-square' do
-                    %span.material-icons.admin-actions__link__icon= 'group_add'
-
               .admin-list-actions__link
                 = form_for user, role: 'form', method: :patch do |f|
                   = f.check_box :is_admin, checked: !user.is_admin, class: 'd-none'
