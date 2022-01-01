@@ -60,7 +60,7 @@ class Tournament < ApplicationRecord
     federal_state = nil
     if self.city.present?
       city = self.city.downcase
-      city = city.gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')#blup
+      #blup city = city.gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')
       if (federal_states_de.include?(city) || federal_states_en.include?(city))
         federal_state = federal_states_raw[federal_states_de.index(city)] if federal_states_de.index(city).present?
         federal_state = federal_states_raw[federal_states_en.index(city)] if federal_states_en.index(city).present?
@@ -68,14 +68,14 @@ class Tournament < ApplicationRecord
     end
     if federal_state.nil? && self.location.present?
       self.location.downcase.split(' ').each do |l|
-        l = l.gsub(',', '').gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')#blup
+        l = l.gsub(',', '')#blup .gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')
         if (federal_states_de.include?(l) || federal_states_en.include?(l))
           federal_state = federal_states_raw[federal_states_de.index(l)] if federal_states_de.index(l).present?
           federal_state = federal_states_raw[federal_states_en.index(l)] if federal_states_en.index(l).present?
           break
         elsif self.name.present?
           self.name.downcase.split(' ').each do |n|
-            n = n.gsub(',', '').gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')#blup
+            n = n.gsub(',', '')#blup .gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')
             if (federal_states_de.include?(n) || federal_states_en.include?(n))
               federal_state = federal_states_raw[federal_states_de.index(n)] if federal_states_de.index(n).present?
               federal_state = federal_states_raw[federal_states_en.index(n)] if federal_states_en.index(n).present?

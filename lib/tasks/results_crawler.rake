@@ -33,9 +33,10 @@ namespace :results_crawler do
   desc "Find and create past external tournaments from braacket.com"
   task createTournaments: :environment do
     links = [
-      'https://braacket.com/league/ALLOFTHEM/tournament?rows=200',
-      'https://braacket.com/league/ALLOFTHEM/tournament?rows=200&page=2',
-      'https://braacket.com/league/SSBUCHPRs/tournament?rows=200'
+      # blup
+      # 'https://braacket.com/league/ALLOFTHEM/tournament?rows=200',
+      # 'https://braacket.com/league/ALLOFTHEM/tournament?rows=200&page=2',
+      # 'https://braacket.com/league/SSBUCHPRs/tournament?rows=200'
     ]
     links.each do |link|
       puts "\nCrawling #{link}..."
@@ -75,13 +76,13 @@ namespace :results_crawler do
           if externalTournament.name.include?('Weekly')
             # tournament is a weekly -> check if we know it's city
             externalTournament.subtype = 'weekly'
-            externalTournament.city = '?'
-            externalTournament.name.split(' ').each do |word|
-              if tournament_cities().include?(word)
-                externalTournament.city = word
-                break
-              end
-            end
+            # externalTournament.city = '?'
+            # externalTournament.name.split(' ').each do |word|
+            #   if tournament_cities().include?(word)
+            #     externalTournament.city = word
+            #     break
+            #   end
+            # end
           else
             externalTournament.subtype = 'external'
             externalTournament.city = ''
@@ -333,14 +334,14 @@ namespace :results_crawler do
         result.player = Player.find_by(gamer_tag: player.gamer_tag)
         result.tournament = tournament
         if tournament.name.include?('Weekly')
-          # tournament is a weekly -> check if we know it's city
-          result.city = '?'
-          tournament.name.split(' ').each do |word|
-            if tournament_cities().include?(word)
-              result.city = word
-              break
-            end
-          end
+          # # tournament is a weekly -> check if we know it's city
+          # result.city = '?'
+          # tournament.name.split(' ').each do |word|
+          #   if tournament_cities().include?(word)
+          #     result.city = word
+          #     break
+          #   end
+          # end
         else
           result.major_name = tournament.name
         end

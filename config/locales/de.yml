@@ -520,7 +520,7 @@ de:
       li1: "Interne Turniere unterstützen alle Funktionen des GermanySmash Turniermanagers"
       li2: "Externe Turniere werden verwendet, um eine andere Registrierungs-Website mit dem GermanySmash Turniermanager zu verknüpfen"
       li3: "Weekly Turniere sind gleich wie interne Turniere. Jedoch kannst du mehrere Turniere auf ein Mal erstellen, indem du ein Enddatum setzt.
-        Der Name der Weeklies wird aus der definierten Stadt und dem Datum generiert. Zum Beispiel: 'SSBU Weekly Bern KW20 2020'"
+        Der Name der Weeklies wird aus der definierten Stadt und dem Datum generiert. Zum Beispiel: 'SSBU Weekly Berlin KW20 2020'"
     details: "Details"
     waiting_list: "Warteliste"
     ranking: "Rangliste"

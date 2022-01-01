@@ -1,24 +1,5 @@
 module TournamentsHelper
 
-  def tournament_cities
-    ['Basel', 'Bellinzona', 'Bern', 'Bioggio', 'Burgdorf', 'Ecuvillens',
-      'Fribourg', 'Genève', 'Horw', 'La Chaux-de-Fonds', 'Lausanne', 'Luzern',
-      'Neuchâtel', 'Solothurn', 'Trimbach', 'Viganello', 'Zurich']
-  end
-
-  def tournament_cities_with_a_weekly
-    ['Basel', 'Bern', 'Burgdorf', 'Burgdorf #2', 'Fribourg', 'Lausanne',
-      'Solothurn', 'Trimbach', 'Vernier', 'Yverdon-les-Bains', 'Zurich']
-  end
-
-  def tournament_majors
-    ["Baksuz", "Casino", "Colosseum Basel", "Dodge This!", "Fantasy Basel",
-      "Frismash", "Full House", "HeroFest", "Japan Impact", "Orcus Smash",
-      "PK Bern", "Polymanga", "Qwertz", "Röstinament", "Saint Smash",
-      "Smash Castle", "Smash Club", "Smash Hammered", "SNWC", "SoluSmash",
-      "GermanyGeek", "UltiBaits", "UltiMelt", "UltiMon", "University of Smash"]
-  end
-
   def valid_challonge_url(str)
     str.downcase.gsub(/[^0-9A-Za-z\s]/, '').strip.gsub(' ', '_').gsub('__', '_').gsub('__', '_')
   end

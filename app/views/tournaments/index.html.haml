@@ -48,9 +48,6 @@
         .tournaments__filter__button= link_to t('external'), tournaments_path(search: params[:search], filter: 'external', anchor: 'upcoming'), class: "btn #{params[:filter] == 'external' ? 'btn-sstm' : 'btn-ghost'}"
         .tournaments__filter__button= link_to t('internal'), tournaments_path(search: params[:search], filter: 'internal', anchor: 'upcoming'), class: "btn #{params[:filter] == 'internal' ? 'btn-sstm' : 'btn-ghost'}"
         .tournaments__filter__button= link_to t('weekly'), tournaments_path(search: params[:search], filter: 'weekly', anchor: 'upcoming'), class: "btn #{params[:filter] == 'weekly' ? 'btn-sstm' : 'btn-ghost'}"
-      .row.without_col
-        - tournament_cities.each do |city|
-          .tournaments__filter__button= link_to city, tournaments_path(search: params[:search], filter: city.downcase, anchor: 'upcoming'), class: "btn #{params[:filter] == city.downcase ? 'btn-sstm' : 'btn-ghost'}"
 
     %table.table.table-hover.table-tournaments
       %thead.table-header
@@ -74,9 +71,6 @@
         .tournaments__filter__button= link_to t('external'), tournaments_path(search: params[:search], filter: 'external', anchor: 'past'), class: "btn #{params[:filter] == 'external' ? 'btn-sstm' : 'btn-ghost'}"
         .tournaments__filter__button= link_to t('internal'), tournaments_path(search: params[:search], filter: 'internal', anchor: 'past'), class: "btn #{params[:filter] == 'internal' ? 'btn-sstm' : 'btn-ghost'}"
         .tournaments__filter__button= link_to t('weekly'), tournaments_path(search: params[:search], filter: 'weekly', anchor: 'past'), class: "btn #{params[:filter] == 'weekly' ? 'btn-sstm' : 'btn-ghost'}"
-      .row.without_col
-        - tournament_cities.each do |city|
-          .tournaments__filter__button= link_to city, tournaments_path(search: params[:search], filter: city.downcase, anchor: 'past'), class: "btn #{params[:filter] == city.downcase ? 'btn-sstm' : 'btn-ghost'}"
 
     %table.table.table-hover.table-tournaments
       %thead.table-header

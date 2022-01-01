@@ -21,12 +21,12 @@
     }
   }
   &.btn-ghost {
-    background: transparent;
-    border: 1px solid $color-red;
-    color: $color-red;
+    background: $color-germany-smash;
+    border: 1px solid $color-germany-smash;
+    color: $color-white;
     &:hover {
-      background: $color-red;
-      color: $color-white;
+      background: transparent;
+      color: $color-germany-smash;
     }
     &:focus, .focus {
       box-shadow: $shadow-input;

@@ -22,15 +22,7 @@ class TournamentsController < ApplicationController
       @inactive_tournaments = @inactive_tournaments.search(params[:search]) if @inactive_tournaments.present?
     end
     if params[:filter].present? and params[:filter] != 'all'
-      if helpers.tournament_cities.include?(params[:filter].capitalize)
-        city = params[:filter].capitalize
-        @tournaments = @tournaments.where(city: city).or(
-          @tournaments.from_city(city)
-        )
-        @past_tournaments = @past_tournaments.where(city: city).or(
-          @past_tournaments.from_city(city)
-        )
-      elsif params[:filter] == 's12_2022'
+      if params[:filter] == 's12_2022'
         @tournaments = @tournaments.where('date >= ? AND date < ?', Time.local(2022,1,1), Time.local(2022,12,31,23,59,59)).where.not(subtype: 'weekly').where("name NOT ILIKE ?", "%Weekly%")
         @past_tournaments = @past_tournaments.where('date >= ? AND date < ?', Time.local(2022,1,1), Time.local(2022,12,31,23,59,59)).where.not(subtype: 'weekly').where("name NOT ILIKE ?", "%Weekly%")
       else  # 'weekly', 'internal' or 'external'
@@ -373,7 +365,7 @@ class TournamentsController < ApplicationController
 
         # setup a challonge tournament
         ct = Challonge::Tournament.new
-        ct.name = @tournament.name #'SSBU Bern KW1' or 'PK Bern #1'
+        ct.name = @tournament.name #'SSBU Berlin KW1' or 'PK Berlin #1'
         ct.url = helpers.valid_challonge_url(@tournament.name) #'ssbu_bern_kw1' or 'pk_bern_1'
         ct.tournament_type = 'double elimination'
         ct.group_stages_enabled = @tournament.has_pools?
