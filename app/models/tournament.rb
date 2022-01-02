@@ -53,7 +53,7 @@ class Tournament < ApplicationRecord
     User.find_by(username: self.host_username) if self.host_username.present?
   end
 
-  def federal_state
+  def get_federal_state
     federal_states_raw = ApplicationController.helpers.federal_states_raw
     federal_states_de = I18n.t(federal_states_raw, scope: 'defines.federal_states', locale: :de).map(&:downcase)
     federal_states_en = I18n.t(federal_states_raw, scope: 'defines.federal_states', locale: :en).map(&:downcase)
