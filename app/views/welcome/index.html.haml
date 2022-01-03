@@ -5,29 +5,32 @@
 %p
   .row{style: 'text-align: center;'}
     .col
-      = link_to 'https://discord.gg/RsjCFgmh', target: '_blank' do
+      = link_to new_user_registration_path do
         %p{style: 'margin-bottom: 0;'}
-          %strong= "Join us"
-        = image_tag "Discord-Logo-Color.svg", class: 'welcome_image'
-    .col
-      = link_to 'https://twitter.com/GermanSmashCom', target: '_blank' do
-        %p{style: 'margin-bottom: 0;'}
-          %strong= "Follow us"
-        = image_tag "Twitter_Logo.svg", class: 'welcome_image'
+          %strong= t('sign_up')
+        %span.welcome_image.material-icons.admin-actions__link__icon= 'person_add'
     .col
       = link_to calendar_path do
         %p{style: 'margin-bottom: 0;'}
-          %strong= "Find us"
+          %strong= t('tournaments.calendar')
         = image_tag "Calendar_Logo.svg", class: 'welcome_image'
+    .col
+      = link_to '#blup' do
+        %p{style: 'margin-bottom: 0;'}
+          %strong= "Communities"
+        -# = image_tag "Flag_map_of_Germany.svg", class: 'welcome_image'
+        = image_tag "Karte_Deutschland.svg", class: 'welcome_image'
+%p
+  = t('welcome.body0')
+
 %p
   = t('welcome.body1',
-    discord_link: link_to('Discord', 'https://discord.gg/RsjCFgmh', target: '_blank', style: 'font-weight: 600;'),
-    twitter_link: link_to('Twitter', 'https://twitter.com/GermanSmashCom', target: '_blank', style: 'font-weight: 600;')).html_safe
+    tournaments_link: link_to(t('welcome.tournament_list'), tournaments_path, style: 'font-weight: 600;'),
+    calendar_link: link_to(t('welcome.calendar'), calendar_path, style: 'font-weight: 600;')).html_safe
 
 %p
   = t('welcome.body2',
-    tournaments_link: link_to(t('welcome.tournament_list'), tournaments_path, style: 'font-weight: 600;'),
-    calendar_link: link_to(t('welcome.calendar'), calendar_path, style: 'font-weight: 600;')).html_safe
+    communities: link_to(t('welcome.communities'), '#blup', style: 'font-weight: 600;')).html_safe
 
 %p
   = t('welcome.body3',

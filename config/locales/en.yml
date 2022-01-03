@@ -161,8 +161,9 @@ en:
 
   welcome:
     title: "GermanySmash"
-    body1: "If you want to stay up-to-date with the Germany Smash Community, join us on %{discord_link} and follow the Germany Smash %{twitter_link} Account."
-    body2: "You can find the upcoming events in the %{tournaments_link} or in the %{calendar_link}."
+    body0: "Welcome to Smash Bros. Germany, your entry point into the German Super Smash Bros. scene."
+    body1: "You can find the upcoming events in the %{tournaments_link} or in the %{calendar_link}."
+    body2: "Your regional community should be able to be found under %{communities}."
     body3: "%{log_in_link} or %{sign_up_link} if you haven't yet, to be able to join a tournament."
     body4: "You can find the official Power Ranking of Germany under %{rankings_link}."
     body5: "Here you can find all %{players_link} registered on GermanySmash and here you can find the %{statistics_link}."
@@ -171,6 +172,7 @@ en:
     calendar: "Calendar"
     log_in: "Log in"
     sign_up: "Sign up"
+    communities: "Communities"
 
   information:
     title: "Information"
@@ -574,6 +576,7 @@ en:
     seed_players: "Seed players"
     seed_players_randomly: "Seed players randomly"
     seed_players_tournament_confirm: "Are you sure? The current player seeding will be overwritten."
+    calendar: "Calendar"
 
   video:
     title: "Videos"

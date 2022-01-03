@@ -160,9 +160,10 @@ de:
       player: "Spieler"
 
   welcome:
-    title: "GermanySmash"
-    body1: "Wenn du mit der Germany Smash Community auf dem Laufenden bleiben willst, schließe dich uns auf %{discord_link} an und folge dem Germany Smash %{twitter_link} Account."
-    body2: "Du findest die bevorstehenden Ereignisse in der %{tournaments_link} oder im %{calendar_link}."
+    title: "Smash Bros. Germany"
+    body0: "Willkommen bei Smash Bros. Germany, deinem Einstiegspunkt in die deutsche Super Smash Bros. Szene."
+    body1: "Du findest die bevorstehenden Ereignisse in der %{tournaments_link} oder im %{calendar_link}."
+    body2: "Deine regionale Community sollte unter %{communities} zu finden sein."
     body3: "%{log_in_link} oder %{sign_up_link}, falls du das noch nicht getan hast, um an einem Turnier teilnehmen zu können."
     body4: "Das offizielle Power Ranking von Deutschland findest du unter %{rankings_link}."
     body5: "Hier gehts zu allen auf GermanySmash registrierten %{players_link} und hier zu den %{statistics_link}."
@@ -171,6 +172,7 @@ de:
     calendar: "Kalender"
     log_in: "Logge dich ein"
     sign_up: "melde dich an"
+    communities: "Communities"
 
   information:
     title: "Informationen"
@@ -574,6 +576,7 @@ de:
     seed_players: "Spieler Seeden"
     seed_players_randomly: "Spieler zufällig Seeden"
     seed_players_tournament_confirm: "Bist du sicher? Die aktuelle Spielerreihenfolge wird überschrieben."
+    calendar: "Turnierkalender"
 
   video:
     title: "Videos"
