@@ -1,8 +1,8 @@
 .rankings__filter
   .row.without_col
-    .rankings__filter__button= link_to t('rankings.filter.overall'), rankings_path(filter: 'all', anchor: 'points'), class: "btn #{(params[:filter].nil? or params[:filter] == 'all') ? 'btn-sstm' : 'btn-ghost'}"
-    .rankings__filter__button= link_to t('rankings.filter.seed_points'), rankings_path(filter: 'seed_points', anchor: 'points'), class: "btn #{(params[:filter] == 'seed_points') ? 'btn-sstm' : 'btn-ghost'}"
-    .rankings__filter__button= link_to t('players.participations'), rankings_path(filter: 'participations', anchor: 'points'), class: "btn #{(params[:filter] == 'participations') ? 'btn-sstm' : 'btn-ghost'}"
+    .rankings__filter__button= link_to t('rankings.filter.overall'), rankings_path(filter: 'all', anchor: 'points'), class: "btn #{(params[:filter].nil? or params[:filter] == 'all') ? 'btn-ghost' : 'btn-default'}"
+    .rankings__filter__button= link_to t('rankings.filter.seed_points'), rankings_path(filter: 'seed_points', anchor: 'points'), class: "btn #{(params[:filter] == 'seed_points') ? 'btn-ghost' : 'btn-default'}"
+    .rankings__filter__button= link_to t('players.participations'), rankings_path(filter: 'participations', anchor: 'points'), class: "btn #{(params[:filter] == 'participations') ? 'btn-ghost' : 'btn-default'}"
   .row
     .col{style: 'font-size: 12px;'}
       = t('rankings.filter.note')
@@ -70,7 +70,7 @@
             - if current_user.present? and current_user.super_admin?
               %td.admin-list-actions
                 .admin-list-actions__link
-                  = link_to edit_player_path(player), class:'btn btn-ghost btn-square' do
+                  = link_to edit_player_path(player), class:'btn btn-default btn-square' do
                     %span.material-icons.admin-actions__link__icon= 'edit'
 
                 .admin-list-actions__link

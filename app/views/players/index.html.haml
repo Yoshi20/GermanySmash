@@ -18,7 +18,7 @@
     .search-form.form-group
       = form_tag players_path, method: 'get', class: 'form-inline' do
         = search_field_tag :search, params[:search], class: 'form-control', placeholder: t('players.search')
-        = button_tag type: 'submit', class: 'btn btn-ghost', name: nil do
+        = button_tag type: 'submit', class: 'btn btn-default', name: nil do
           %span.material-icons= 'search'
 
 .tab-content#players-tabs-content
@@ -55,7 +55,7 @@
               - if current_user.present? and current_user.super_admin?
                 %td.admin-list-actions
                   .admin-list-actions__link
-                    = link_to edit_player_path(player), class:'btn btn-ghost btn-square' do
+                    = link_to edit_player_path(player), class:'btn btn-default btn-square' do
                       %span.material-icons.admin-actions__link__icon= 'edit'
 
     .player-list-footer
@@ -95,7 +95,7 @@
               - if current_user.present? and current_user.super_admin?
                 %td.admin-list-actions
                   .admin-list-actions__link
-                    = link_to edit_player_path(player), class:'btn btn-ghost btn-square' do
+                    = link_to edit_player_path(player), class:'btn btn-default btn-square' do
                       %span.material-icons.admin-actions__link__icon= 'edit'
 
     .player-list-footer

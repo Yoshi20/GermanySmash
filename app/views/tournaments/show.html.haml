@@ -155,9 +155,9 @@
                         - else
                           = button_to t('tournaments.tournament_full'), "/tournaments/add_player/#{@tournament.id}#details", params:{waiting_list: true}, method:'post', class:'btn btn-info', style:'background-color: #17a2b8;'
                       - else
-                        = button_to t('tournaments.join_tournament'), "/tournaments/add_player/#{@tournament.id}#details", method:'post', class:'btn btn-ghost'
+                        = button_to t('tournaments.join_tournament'), "/tournaments/add_player/#{@tournament.id}#details", method:'post', class:'btn btn-default'
                     - else
-                      = button_tag t('tournaments.log_in_to_join'), class:'btn btn-ghost', 'data-toggle'=>'modal', 'data-target'=>'#loginModal', 'aria-haspopup'=>'true', 'aria-expanded'=>'false'
+                      = button_tag t('tournaments.log_in_to_join'), class:'btn btn-default', 'data-toggle'=>'modal', 'data-target'=>'#loginModal', 'aria-haspopup'=>'true', 'aria-expanded'=>'false'
 
       - if @tournament.setup
         .tournament__details
@@ -165,7 +165,7 @@
             .col
               .tournament__details__single.tournament__details__single--last
                 %strong
-                  = link_to 'Challonge', "https://challonge.com/de/#{valid_challonge_url(@tournament.name)}", target: '_blank', class:'btn btn-sstm'
+                  = link_to 'Challonge', "https://challonge.com/de/#{valid_challonge_url(@tournament.name)}", target: '_blank', class:'btn btn-default'
                 %span= t('tournaments.bracket')
 
       - if current_user.present? and current_user.super_admin?
@@ -304,12 +304,12 @@
               - if !@tournament.setup and !@tournament.started and !@tournament.finished
                 .row{style: 'margin-bottom: 2rem;'}
                   .col
-                    = button_to t('tournaments.seed_players'), "/tournaments/seed_players/#{@tournament.id}", method: 'patch', class:'btn btn-ghost', id:'seed_players-tournament-button', :data => {:confirm => t('tournaments.seed_players_tournament_confirm')}
+                    = button_to t('tournaments.seed_players'), "/tournaments/seed_players/#{@tournament.id}", method: 'patch', class:'btn btn-default', id:'seed_players-tournament-button', :data => {:confirm => t('tournaments.seed_players_tournament_confirm')}
                   .col
-                    = button_to t('tournaments.seed_players_randomly'), "/tournaments/seed_players/#{@tournament.id}", method: 'patch', class:'btn btn-ghost', id:'seed_players-tournament-button', params: {randomly: true}, :data => {:confirm => t('tournaments.seed_players_tournament_confirm')}
+                    = button_to t('tournaments.seed_players_randomly'), "/tournaments/seed_players/#{@tournament.id}", method: 'patch', class:'btn btn-default', id:'seed_players-tournament-button', params: {randomly: true}, :data => {:confirm => t('tournaments.seed_players_tournament_confirm')}
               .row
                 .col
-                  = mail_to "", t('tournaments.mail_all_players'), bcc: mail_string, subject: "#{t('tournaments.mail_all_players_subject')} #{@tournament.name}", class: 'btn btn-ghost'
+                  = mail_to "", t('tournaments.mail_all_players'), bcc: mail_string, subject: "#{t('tournaments.mail_all_players_subject')} #{@tournament.name}", class: 'btn btn-default'
 
         - if current_user.present? and current_user.admin? and !@tournament.setup and !@tournament.started and !@tournament.finished
           .tournament__players
@@ -317,11 +317,11 @@
               .col
                 = form_tag "/tournaments/add_player/#{@tournament.id}#players", method:'post', class: 'form-group' do
                   = text_field_tag :gamer_tag, params[:gamer_tag], class: 'form-control'
-                  = submit_tag t('tournaments.add_player'), name:nil, class: 'btn btn-ghost', style: 'margin-top: 0.4rem;'
+                  = submit_tag t('tournaments.add_player'), name:nil, class: 'btn btn-default', style: 'margin-top: 0.4rem;'
               .col
                 = form_tag "/tournaments/remove_player/#{@tournament.id}#players", method:'post', class: 'form-group' do
                   = text_field_tag :gamer_tag, params[:gamer_tag], class: 'form-control'
-                  = submit_tag t('tournaments.remove_player'), name:nil, class: 'btn btn-ghost', style: 'margin-top: 0.4rem;'
+                  = submit_tag t('tournaments.remove_player'), name:nil, class: 'btn btn-default', style: 'margin-top: 0.4rem;'
                   .form-group{style: 'margin-bottom: -2rem;'}
                     (
                     = check_box_tag :warn
@@ -344,7 +344,7 @@
                   .col
                     = form_for @registration, as: :registration, url: registration_path(id: @registration.id, anchor: 'players'), role: 'form', method: :patch do |f|
                       = f.number_field :game_stations, value: 1, style: 'width:35px', min: 0, max: @currently_needed_game_stations
-                      = f.submit t('tournaments.bring_a_setup.i_will_bring'), class:'btn btn-ghost', id:'bring-game-stations-button', style: 'display:inline'
+                      = f.submit t('tournaments.bring_a_setup.i_will_bring'), class:'btn btn-default', id:'bring-game-stations-button', style: 'display:inline'
                       %br
                       = (@currently_needed_game_stations > 1) ? t('tournaments.bring_a_setup.max_more_needed_setups', setups: @currently_needed_game_stations) : t('tournaments.bring_a_setup.max_one_more_needed_setup')
 
@@ -419,10 +419,10 @@
         - if @tournament.is_registration_allowed and !@tournament.setup and !@tournament.started
           = button_to t('tournaments.set_up_tournament'), "/tournaments/setup/#{@tournament.id}", class:'btn btn-cyan', id:'setup-tournament-button', :data => {:confirm => t('tournaments.set_up_tournament_confirm')}
         - elsif @tournament.is_registration_allowed and @tournament.setup and !@tournament.started
-          = button_to t('tournaments.start_tournament'), "/tournaments/start/#{@tournament.id}", class:'btn btn-sstm', id:'start-tournament-button', :data => {:confirm => t('tournaments.start_tournament_confirm')}
+          = button_to t('tournaments.start_tournament'), "/tournaments/start/#{@tournament.id}", class:'btn btn-cyan', id:'start-tournament-button', :data => {:confirm => t('tournaments.start_tournament_confirm')}
       .col{style: 'text-align: right;'}
         - if @tournament.is_registration_allowed and @tournament.started
-          = button_to t('tournaments.finish_tournament'), "/tournaments/finish/#{@tournament.id}", class:'btn btn-sstm', id:'finish-tournament-button', :data => {:confirm => t('confirm')}
+          = button_to t('tournaments.finish_tournament'), "/tournaments/finish/#{@tournament.id}", class:'btn btn-cyan', id:'finish-tournament-button', :data => {:confirm => t('confirm')}
         - else
           -# cancel tournament form
           = form_for @tournament, role: 'form', as: :tournament, url: "/tournaments/cancel/#{@tournament.id}", method: :post do |f|
@@ -433,11 +433,11 @@
   - if current_user.present? and current_user.admin?
     .admin-actions
       .admin-actions__link
-        = link_to edit_tournament_path(@tournament), class:'btn btn-ghost btn-square' do
+        = link_to edit_tournament_path(@tournament), class:'btn btn-default btn-square' do
           %span.material-icons.admin-actions__link__icon= 'edit'
 
       .admin-actions__link
-        = link_to new_tournament_path(id: @tournament.id), class:'btn btn-ghost btn-square' do
+        = link_to new_tournament_path(id: @tournament.id), class:'btn btn-default btn-square' do
           %span.material-icons.admin-actions__link__icon= 'add_to_photos'
 
       .admin-actions__link

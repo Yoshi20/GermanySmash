@@ -20,13 +20,25 @@
       box-shadow: $shadow-input;
     }
   }
-  &.btn-ghost {
+  &.btn-default {
     background: $color-germany-smash;
     border: 1px solid $color-germany-smash;
     color: $color-white;
     &:hover {
       background: transparent;
       color: $color-germany-smash;
+    }
+    &:focus, .focus {
+      box-shadow: $shadow-input;
+    }
+  }
+  &.btn-ghost {
+    background: transparent;
+    border: 1px solid $color-germany-smash;
+    color: $color-germany-smash;
+    &:hover {
+      background: $color-germany-smash;
+      color: $color-white;
     }
     &:focus, .focus {
       box-shadow: $shadow-input;
