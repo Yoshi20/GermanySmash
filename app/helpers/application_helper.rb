@@ -70,8 +70,8 @@ module ApplicationHelper
       canonical: request.original_url,
       noindex: !Rails.env.production?,
       icon: [
-        { href: image_url('logo.webp') },
-        { href: image_url('logo.webp'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url('logo.png') },
+        { href: image_url('logo.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
       ],
       og: {
         site_name: 'germanysmash.de',
@@ -79,7 +79,7 @@ module ApplicationHelper
         description: 'Germany Super Smash Brothers E-Sports Community',
         type: 'website',
         url: request.original_url,
-        image: image_url('logo.webp')
+        image: image_url('logo.png')
       }
     }
   end
