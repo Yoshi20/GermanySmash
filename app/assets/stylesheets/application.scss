@@ -14,6 +14,7 @@
 
 @import "./_includes/variables";
 
+@import "cookies_eu";
 @import "bootstrap";
 @import "material_icons";
 @import "fullcalendar";
@@ -129,4 +130,12 @@ a.disabled {
 
 .fc-time {
   font-size: 12px;
+}
+
+.cookies-eu {
+  top: 0;
+  bottom: unset;
+  @media screen and (max-width: 767px) {
+    position: fixed;
+  }
 }

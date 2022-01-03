@@ -192,7 +192,10 @@
         .tournament__location
           - address_array = @tournament.location.split(',')
           - address = (address_array[1].to_s.strip + ',' + address_array[2].to_s).gsub(' ', '+')
-          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "https://www.google.com/maps/embed/v1/search?q=#{address}&key=#{ENV['GOOGLE_MAPS_API_KEY']}", :style => "border:0", :width => "100%"}
+          - if cookies[:cookie_eu_consented] == "true"
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "https://www.google.com/maps/embed/v1/search?q=#{address}&key=#{ENV['GOOGLE_MAPS_API_KEY']}", :style => "border:0", :width => "100%"}
+          - else
+            Cookies must be accepted for this function
 
     - if @tournament.is_registration_allowed
       .tab-pane.fade#players{role: 'tabpanel', 'aria-labelledby'=>'description-tab'}
