@@ -56,22 +56,14 @@ class Tournament < ApplicationRecord
   end
 
   def set_federal_state
-    puts 'blup'
-    puts 'set_federal_state'
-    puts self.inspect
     return if self.federal_state.present?
-    puts 'blup2'
     federal_states_raw = ApplicationController.helpers.federal_states_raw
-    puts 'federal_states_raw: ' + federal_states_raw.join(', ')
     federal_states_de = I18n.t(federal_states_raw, scope: 'defines.federal_states', locale: :de).map(&:downcase)
-    puts 'federal_states_de: ' + federal_states_de.join(', ')
     federal_states_en = I18n.t(federal_states_raw, scope: 'defines.federal_states', locale: :en).map(&:downcase)
-    puts 'federal_states_en: ' + federal_states_en.join(', ')
     # First: Try to determine federal_state from city
     if self.city.present?
-      puts 'city'
       city = self.city.downcase
-      #blup city = city.gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')
+      #city = city.gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')
       if (federal_states_de.include?(city) || federal_states_en.include?(city))
         self.federal_state = federal_states_raw[federal_states_de.index(city)] if federal_states_de.index(city).present?
         self.federal_state = federal_states_raw[federal_states_en.index(city)] if federal_states_en.index(city).present?
@@ -80,9 +72,8 @@ class Tournament < ApplicationRecord
     end
     # Second: Try to determine federal_state from a word in location
     if self.location.present?
-      puts 'location'
       self.location.downcase.split(' ').each do |l|
-        l = l.gsub(',', '')#blup .gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')
+        l = l.gsub(',', '')#.gsub('basel', 'basel-stadt').gsub('bâle', 'bâle-ville').gsub('gallen', 'st. gallen')
         if (federal_states_de.include?(l) || federal_states_en.include?(l))
           self.federal_state = federal_states_raw[federal_states_de.index(l)] if federal_states_de.index(l).present?
           self.federal_state = federal_states_raw[federal_states_en.index(l)] if federal_states_en.index(l).present?
@@ -93,12 +84,9 @@ class Tournament < ApplicationRecord
       require 'open-uri'
       require 'json'
       begin
-        puts 'google maps'
         json_data = JSON.parse(URI.open("https://maps.googleapis.com/maps/api/geocode/json?address=#{ERB::Util.url_encode(self.location)}&components=country:DE&key=#{ENV['GOOGLE_MAPS_SERVER_SIDE_API_KEY']}&outputFormat=json").read)
-        puts json_data.inspect
         if json_data["status"] == "OK" && json_data["results"].present? && json_data["results"][0].present?
           json_data["results"][0]["address_components"].each do |res|
-            puts res.inspect
             if (res["types"].present? && res["types"].include?('administrative_area_level_1'))
               if res["long_name"].present?
                 sn = res["short_name"]
@@ -121,7 +109,6 @@ class Tournament < ApplicationRecord
         puts ex
       end
     end
-    puts 'no location!'
   end
 
 end
