@@ -94,7 +94,7 @@ class Tournament < ApplicationRecord
       require 'json'
       begin
         puts 'google maps'
-        json_data = JSON.parse(URI.open("https://maps.googleapis.com/maps/api/geocode/json?address=#{ERB::Util.url_encode(self.location)}&components=country:DE&key=#{ENV['GOOGLE_MAPS_API_KEY']}&outputFormat=json").read)
+        json_data = JSON.parse(URI.open("https://maps.googleapis.com/maps/api/geocode/json?address=#{ERB::Util.url_encode(self.location)}&components=country:DE&key=#{ENV['GOOGLE_MAPS_SERVER_SIDE_API_KEY']}&outputFormat=json").read)
         puts json_data.inspect
         if json_data["status"] == "OK" && json_data["results"].present? && json_data["results"][0].present?
           json_data["results"][0]["address_components"].each do |res|
