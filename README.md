@@ -42,4 +42,4 @@ Banner:
 - https://www.ssbwiki.com/Super_Smash_Bros._Ultimate
 
 Google Analytics:
-<!-- blup: - https://analytics.google.com/analytics/web/#/report-home/a145089919w206718824p199562205 -->
+- https://analytics.google.com/analytics/web/?pli=1#/report-home/a145089919w298044912p257719884

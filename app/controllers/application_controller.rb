@@ -60,14 +60,14 @@ class ApplicationController < ActionController::Base
   private
     def set_locale
       if params[:locale].present?
-        cookies.permanent[:locale] = params[:locale]
+        cookies.permanent[:locale] = params[:locale] if cookies[:cookie_eu_consented] == "true"
       end
       localeCookie = cookies[:locale]
       if localeCookie.present?
         I18n.locale = localeCookie
       else
         I18n.locale = http_accept_language.compatible_language_from(I18n.available_locales)
-        cookies.permanent[:locale] = I18n.locale.to_s
+        cookies.permanent[:locale] = I18n.locale.to_s if cookies[:cookie_eu_consented] == "true"
       end
     end
 

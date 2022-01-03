@@ -68,6 +68,8 @@
                     = t('please_donate')
                     = image_tag('paypal_icon.png', class: 'paypal', height: '30px', width: '30px')
 
+  = render 'cookies_eu/consent_banner'
+
 :javascript
   I18n.defaultLocale = "#{I18n.default_locale}";
   I18n.locale = "#{I18n.locale}";
