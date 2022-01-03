@@ -58,10 +58,15 @@ class Tournament < ApplicationRecord
   def set_federal_state
     puts 'blup'
     puts 'set_federal_state'
+    puts self.inspect
     return if self.federal_state.present?
+    puts 'blup2'
     federal_states_raw = ApplicationController.helpers.federal_states_raw
+    puts 'federal_states_raw: ' + federal_states_raw.join(', ')
     federal_states_de = I18n.t(federal_states_raw, scope: 'defines.federal_states', locale: :de).map(&:downcase)
+    puts 'federal_states_de: ' + federal_states_de.join(', ')
     federal_states_en = I18n.t(federal_states_raw, scope: 'defines.federal_states', locale: :en).map(&:downcase)
+    puts 'federal_states_en: ' + federal_states_en.join(', ')
     # First: Try to determine federal_state from city
     if self.city.present?
       puts 'city'
@@ -116,6 +121,7 @@ class Tournament < ApplicationRecord
         puts ex
       end
     end
+    puts 'no location!'
   end
 
 end
