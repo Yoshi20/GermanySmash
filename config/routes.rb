@@ -15,6 +15,16 @@ Rails.application.routes.draw do
 
   get 'videos' => 'videos#index'
 
+  get 'communities' => 'communities#index'
+  get 'communities/nrw' => 'communities#nrw'
+  get 'communities/hessen' => 'communities#hessen'
+  get 'communities/nds' => 'communities#nds'
+  get 'communities/bayern' => 'communities#bayern'
+  get 'communities/berlin' => 'communities#berlin'
+  get 'communities/norden' => 'communities#norden'
+  get 'communities/osten' => 'communities#osten'
+  get 'communities/bawu' => 'communities#bawu'
+
   resources :news
   get 'administrators' => 'administrators#index'
   get 'imprint' => 'imprint#index'

@@ -1,0 +1,90 @@
+- set_meta_tags description: 'Germany Smash Communities'
+
+.row
+  .col
+    %h1.page__title= t('communities.title')
+
+:css
+  .bl path { cursor:pointer; }
+  .BadenWuerttemberg { fill:hsl(50,80%,40%) }
+  .Bayern { fill:hsl(55,80%,55%); }
+  .Berlin { fill:hsl(200,60%,75%); }
+  .Brandenburg { fill:hsl(200,60%,75%); }
+  .Bremen { fill:hsl(80,75%,70%); }
+  .Hamburg { fill:hsl(230,75%,75%); }
+  .Hessen { fill:hsl(0,75%,75%); }
+  .MecklenburgVorpommern { fill:hsl(230,75%,75%); }
+  .Niedersachsen { fill:hsl(80,75%,70%); }
+  .NordrheinWestfalen { fill:hsl(330,85%,80%); }
+  .RheinlandPfalz { fill:hsl(0,75%,75%); }
+  .Saarland { fill:hsl(0,75%,75%); }
+  .Sachsen { fill:hsl(80,70%,50%); }
+  .SachsenAnhalt { fill:hsl(80,70%,50%); }
+  .SchleswigHolstein { fill:hsl(230,75%,75%); }
+  .Thueringen { fill:hsl(80,70%,50%); }
+
+%figure.svgareamap
+
+:javascript
+  document.addEventListener('turbolinks:load', function() {
+    // https://stackoverflow.com/questions/7981100/how-do-i-dynamically-insert-an-svg-image-into-html
+    if ($('.svgareamap').length > 0) {
+      var xhr = new XMLHttpRequest;
+      xhr.open('get', "#{asset_path('bundeslaender.svg')}",true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+        var svg = xhr.responseXML.documentElement;
+        svg = document.importNode(svg,true); // surprisingly optional in these browsers
+        // remove old svg before appending
+        if ($('#BRD').length > 0) $('#BRD')[0].remove();
+        document.querySelector(".svgareamap").appendChild(svg);
+        var all = document.querySelectorAll('.bl path');
+        // var count = all.length;
+        // console.log (count);
+        for (var i=0; i<16; i++) {
+          all[i].addEventListener ('mouseover', function () {
+            var color = this.getAttribute('fill');
+            // this.setAttribute('style','fill:hsl(80,40%,85%)');
+            this.setAttribute('style','fill:hsl(350,80%,50%)');
+            this.onmouseout = function () {
+              // this.setAttribute('style','fill:hsl(219,40%,85%)');
+              this.setAttribute('style','fill:invalid');
+            }
+          });
+          all[i].addEventListener ('click', function (e) {
+            var bundesland = e.target.classList[0];
+            if      (bundesland === "BadenWuerttemberg") window.location.href = '/communities/bawu';
+            else if (bundesland === "Bayern") window.location.href = '/communities/bayern';
+            else if (bundesland === "Berlin") window.location.href = '/communities/berlin';
+            else if (bundesland === "Brandenburg") window.location.href = '/communities/berlin';
+            else if (bundesland === "Bremen") window.location.href = '/communities/nds';
+            else if (bundesland === "Hamburg") window.location.href = '/communities/norden';
+            else if (bundesland === "Hessen") window.location.href = '/communities/hessen';
+            else if (bundesland === "MecklenburgVorpommern") window.location.href = '/communities/norden';
+            else if (bundesland === "Niedersachsen") window.location.href = '/communities/nds';
+            else if (bundesland === "NordrheinWestfalen") window.location.href = '/communities/nrw';
+            else if (bundesland === "RheinlandPfalz") window.location.href = '/communities/hessen';
+            else if (bundesland === "Saarland") window.location.href = '/communities/hessen';
+            else if (bundesland === "Sachsen") window.location.href = '/communities/osten';
+            else if (bundesland === "SachsenAnhalt") window.location.href = '/communities/osten';
+            else if (bundesland === "SchleswigHolstein") window.location.href = '/communities/norden';
+            else if (bundesland === "Thueringen") window.location.href = '/communities/osten';
+          });
+        }
+      };
+      xhr.send();
+      // var map = document.querySelectorAll('#Mapi area');
+      // for (var i=0; i<map.length; i++) {
+      //   if (map[i].addEventListener) {
+      //     map[i].addEventListener('touchstart', swap, false);
+      //     map[i].addEventListener('mouseover', swap, false);
+      //   }
+      // }
+      //
+      // function swap(ev) {
+      //   var lan = this.getAttribute('alt');
+      //   document.getElementById('deutschland').setAttribute('src','img/' + lan);
+      //   return false;
+      // }
+    }
+  });

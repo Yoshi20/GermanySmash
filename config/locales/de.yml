@@ -583,6 +583,9 @@ de:
     title2: "Spieler Videos"
     players_videos: "%{player}'s Video%{s}:"
 
+  communities:
+    title: "Communities"
+
   users:
     mailer:
       welcome: "Willkommen beim GermanySmash Turniermanager"
