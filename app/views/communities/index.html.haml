@@ -6,24 +6,84 @@
 
 :css
   .bl path { cursor:pointer; }
-  .BadenWuerttemberg { fill:hsl(50,80%,40%) }
-  .Bayern { fill:hsl(55,80%,55%); }
-  .Berlin { fill:hsl(200,60%,75%); }
-  .Brandenburg { fill:hsl(200,60%,75%); }
-  .Bremen { fill:hsl(80,75%,70%); }
-  .Hamburg { fill:hsl(230,75%,75%); }
-  .Hessen { fill:hsl(0,75%,75%); }
-  .MecklenburgVorpommern { fill:hsl(230,75%,75%); }
-  .Niedersachsen { fill:hsl(80,75%,70%); }
-  .NordrheinWestfalen { fill:hsl(330,85%,80%); }
-  .RheinlandPfalz { fill:hsl(0,75%,75%); }
-  .Saarland { fill:hsl(0,75%,75%); }
-  .Sachsen { fill:hsl(80,70%,50%); }
-  .SachsenAnhalt { fill:hsl(80,70%,50%); }
-  .SchleswigHolstein { fill:hsl(230,75%,75%); }
-  .Thueringen { fill:hsl(80,70%,50%); }
+  .BadenWuerttemberg { fill:#FA8737; }
+  .Bayern { fill:#2ED2EB; }
+  .Berlin { fill:#9471FF; }
+  .Brandenburg { fill:#9471FF; }
+  .Bremen { fill:#FFBC16; }
+  .Hamburg { fill:#308AFF; }
+  .Hessen { fill:#FF3837; }
+  .MecklenburgVorpommern { fill:#308AFF; }
+  .Niedersachsen { fill:#FFBC16; }
+  .NordrheinWestfalen { fill:#29B548; }
+  .RheinlandPfalz { fill:#FF3837; }
+  .Saarland { fill:#FF3837; }
+  .Sachsen { fill:#FF9DB6; }
+  .SachsenAnhalt { fill:#FF9DB6; }
+  .SchleswigHolstein { fill:#308AFF; }
+  .Thueringen { fill:#FF9DB6; }
 
 %figure.svgareamap
+
+.row
+  .col
+    .calendar__footer__legend__item
+      = link_to '/communities/nds' do
+        %span.circle{style: "background: #FFBC16;"}
+        %strong= t('communities.nds')
+      %ul
+        %li= t('defines.federal_states.NI')
+        %li= t('defines.federal_states.HB')
+    .calendar__footer__legend__item
+      = link_to '/communities/nrw' do
+        %span.circle{style: "background: #29B548;"}
+        %strong{style: 'color: #29B548;'}= t('communities.nrw')
+      %ul
+        %li= t('defines.federal_states.NW')
+    .calendar__footer__legend__item
+      = link_to '/communities/hessen' do
+        %span.circle{style: "background: #FF3837;"}
+        %strong{style: 'color: #FF3837;'}= t('communities.hessen')
+      %ul
+        %li= t('defines.federal_states.HE')
+        %li= t('defines.federal_states.RP')
+        %li= t('defines.federal_states.SL')
+    .calendar__footer__legend__item
+      = link_to '/communities/bawu' do
+        %span.circle{style: "background: #FA8737;"}
+        %strong{style: 'color: #FA8737;'}= t('communities.bawu')
+      %ul
+        %li= t('defines.federal_states.BW')
+  .col
+    .calendar__footer__legend__item
+      = link_to '/communities/norden' do
+        %span.circle{style: "background: #308AFF;"}
+        %strong{style: 'color: #308AFF;'}= t('communities.norden')
+      %ul
+        %li= t('defines.federal_states.SH')
+        %li= t('defines.federal_states.HH')
+        %li= t('defines.federal_states.MV')
+    .calendar__footer__legend__item
+      = link_to '/communities/berlin' do
+        %span.circle{style: "background: #9471FF;"}
+        %strong{style: 'color: #9471FF;'}= t('communities.berlin')
+      %ul
+        %li= t('defines.federal_states.BB')
+        %li= t('defines.federal_states.BE')
+    .calendar__footer__legend__item
+      = link_to '/communities/osten' do
+        %span.circle{style: "background: #FF9DB6;"}
+        %strong{style: 'color: #FF9DB6;'}= t('communities.osten')
+      %ul
+        %li= t('defines.federal_states.ST')
+        %li= t('defines.federal_states.TH')
+        %li= t('defines.federal_states.SN')
+    .calendar__footer__legend__item
+      = link_to '/communities/bayern' do
+        %span.circle{style: "background: #2ED2EB;"}
+        %strong{style: 'color: #2ED2EB;'}= t('communities.bayern')
+      %ul
+        %li= t('defines.federal_states.BY')
 
 :javascript
   document.addEventListener('turbolinks:load', function() {
@@ -45,7 +105,7 @@
           all[i].addEventListener ('mouseover', function () {
             var color = this.getAttribute('fill');
             // this.setAttribute('style','fill:hsl(80,40%,85%)');
-            this.setAttribute('style','fill:hsl(350,80%,50%)');
+            this.setAttribute('style','fill:#000');
             this.onmouseout = function () {
               // this.setAttribute('style','fill:hsl(219,40%,85%)');
               this.setAttribute('style','fill:invalid');
@@ -73,18 +133,5 @@
         }
       };
       xhr.send();
-      // var map = document.querySelectorAll('#Mapi area');
-      // for (var i=0; i<map.length; i++) {
-      //   if (map[i].addEventListener) {
-      //     map[i].addEventListener('touchstart', swap, false);
-      //     map[i].addEventListener('mouseover', swap, false);
-      //   }
-      // }
-      //
-      // function swap(ev) {
-      //   var lan = this.getAttribute('alt');
-      //   document.getElementById('deutschland').setAttribute('src','img/' + lan);
-      //   return false;
-      // }
     }
   });

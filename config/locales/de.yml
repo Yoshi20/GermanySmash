@@ -585,6 +585,14 @@ de:
 
   communities:
     title: "Communities"
+    nds: "#NDS"
+    nrw: "#NRW"
+    hessen: "#Hessen"
+    bawu: "#BaWü"
+    norden: "#Norden"
+    berlin: "#Berlin"
+    osten: "#Osten"
+    bayern: "#Bayern"
 
   users:
     mailer:
