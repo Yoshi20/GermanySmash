@@ -172,7 +172,7 @@ de:
     calendar: "Kalender"
     log_in: "Logge dich ein"
     sign_up: "melde dich an"
-    communities: "Communities"
+    communities: "Regionen"
 
   information:
     title: "Informationen"
@@ -180,7 +180,7 @@ de:
     general:
       title: "Allgemein"
       germanysmash: |
-        Diese Webanwendung/Website wurde in erster Linie erstellt, um einen Überblick über die Super Smash Bros.-Szene in Deutschland zu geben und einem Turnierorganisator (TO) ein einfaches Tool zum Verwalten seiner Turniere bereitzustellen.<br><br>
+        Diese Webanwendung/Website wurde in erster Linie erstellt, um einen Überblick über die Super Smash Bros. Szene in Deutschland zu geben und einem Turnierorganisator (TO) ein einfaches Tool zum Verwalten seiner Turniere bereitzustellen.<br><br>
         Es soll auch einen Einstiegspunkt für neue Spieler bieten, um ihre jeweilige lokale Smash-Community zu finden.
     calendar:
       title: "Kalender"
@@ -584,7 +584,7 @@ de:
     players_videos: "%{player}'s Video%{s}:"
 
   communities:
-    title: "Communities"
+    title: "Regionen"
     nds: "#NDS"
     nrw: "#NRW"
     hessen: "#Hessen"

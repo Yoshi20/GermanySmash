@@ -172,7 +172,7 @@ en:
     calendar: "Calendar"
     log_in: "Log in"
     sign_up: "Sign up"
-    communities: "Communities"
+    communities: "Regions"
 
   information:
     title: "Information"
@@ -584,7 +584,7 @@ en:
     players_videos: "%{player}'s video%{s}:"
 
   communities:
-    title: "Communities"
+    title: "Regions"
     nds: "#NDS"
     nrw: "#NRW"
     hessen: "#Hesse"
