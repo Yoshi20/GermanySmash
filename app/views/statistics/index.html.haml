@@ -32,25 +32,25 @@
     .row
       - males_count = @players.where(gender: "male").count
       - females_count = @players.where(gender: "female").count
-      - undefined_count = @players.count - males_count - females_count
+      - others_count = @players.where(gender: "other").count
       .col
         .statistic__stats__single
           %strong
             = "#{@player_count_total > 0 ? (males_count.to_f * 100 / @player_count_total).round(2) : 0} %"
           %span
-            = t('statistics.male')
+            = t('defines.genders.male')
       .col
         .statistic__stats__single
           %strong
             = "#{@player_count_total > 0 ? (females_count.to_f * 100 / @player_count_total).round(2) : 0} %"
           %span
-            = t('statistics.female')
+            = t('defines.genders.female')
       .col
         .statistic__stats__single.statistic__stats__single--last
           %strong
-            = "#{@player_count_total > 0 ? (undefined_count.to_f * 100 / @player_count_total).round(2) : 0} %"
+            = "#{@player_count_total > 0 ? (others_count.to_f * 100 / @player_count_total).round(2) : 0} %"
           %span
-            = t('statistics.undefined')
+            = t('defines.genders.other')
 
 
   .statistic__stats
