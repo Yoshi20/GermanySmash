@@ -450,8 +450,8 @@ de:
       li4: "Falls nicht anders definiert, werden Double Elimination Matches gespielt (wenn du zwei Matches verlierst, scheidest du aus dem Turnier aus)"
       li5: "Unbenutzte Turnierspielstationen (Setups) können für Freundschaftsspiele verwendet werden, sobald ein Host dies erlaubt"
     match_rules:
-      title_short: "Rulesets"
-      title: "SSBU-Matchregeln (Rulesets)"
+      title_short: "Ruleset"
+      title: "SSBU-Matchregeln (Ruleset)"
       body: "Derzeit wird das Niederländische-Ruleset in den meisten offiziellen Turnieren in Deutschland verwendet."
       overview_dutch: "Übersicht Niederländische-Ruleset:"
       li1: "1 vs. 1"

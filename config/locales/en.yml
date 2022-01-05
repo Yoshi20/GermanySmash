@@ -450,8 +450,8 @@ en:
       li4: "If not otherwise defined, Double Elimination Matches will be played (if you lose two matches you're out of the tournament)"
       li5: "Unused tournament game stations (setups) can be used for friendly matches as soon as a host allowed it"
     match_rules:
-      title_short: "Rulesets"
-      title: "SSBU match rules (Rulesets)"
+      title_short: "Ruleset"
+      title: "SSBU match rules (Ruleset)"
       body: "For now the Dutch ruleset is used in most of the official tournaments in Germany"
       overview_dutch: "Overview Dutch ruleset:"
       li1: "1 vs. 1"
