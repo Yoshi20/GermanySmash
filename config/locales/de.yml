@@ -404,21 +404,30 @@ de:
   rankings:
     title: "Ranglisten"
     official_power_ranking: "Offizielle Power Rankings"
-    tournament_specific: "Turnier spezifische"
+    region_specific: "Region spezifische"
     filter:
       overall: "Gesamt"
       seed_points: "Seed Punkte"
       note: "(Hinweis: Nur bei GermanySmash registrierte Spieler erscheinen in dieser Rangliste)"
     no_players_found: "Noch keine Spieler gefunden"
-    s1_20:
-      title: "Saison 1&2 2020"
-      no_ranking: "Aufgrund von COVID-19 gibt es kein 2020 Ranking"
     s1_21:
       title: "Saison 1&2 2021"
-      no_ranking: "Das Ranking erscheint voraussichtlich im Januar 2022"
-    s1_22:
-      title: "Saison 1&2 2022"
-      no_ranking: "Das Ranking erscheint voraussichtlich im Januar 2023"
+      no_ranking: "Das Ranking erscheint voraussichtlich mitte 2022"
+    # s1_22:
+    #   title: "Saison 1&2 2022"
+    #   no_ranking: "Das Ranking erscheint voraussichtlich im Januar 2023"
+    region_nrw:
+      title: "NRW"
+    region_hessen:
+      title: "Hessen"
+    region_berlin:
+      title: "Berlin"
+    region_nds:
+      title: "NDS"
+    region_norden:
+      title: "Norden"
+    region_sueden:
+      title: "Süden"
 
   rules:
     title: "Regeln"

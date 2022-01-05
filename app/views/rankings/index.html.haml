@@ -9,37 +9,60 @@
     %a#power_ranking-tab.nav-link.active{'data-toggle'=>'tab', href: '#power_ranking', role: 'tab', 'aria-controls'=>'all'}
       = t('rankings.official_power_ranking')
   %li.nav-item
-    %a#points-tab.nav-link{'data-toggle'=>'tab', href: '#points', role: 'tab', 'aria-controls'=>'all'}
-      = t('rankings.tournament_specific')
+    %a#regions-tab.nav-link{'data-toggle'=>'tab', href: '#regions', role: 'tab', 'aria-controls'=>'all'}
+      = t('rankings.region_specific')
 
 .tab-content#rankings-tabs-content
   -# Power Rankings ------------------------------------------------------------
   .tab-pane.fade.show.active#power_ranking{role: 'tabpanel', 'aria-labelledby'=>'power_ranking-tab'}
     %ul#power_rankings-tabs.nav.nav-pills.nav-fill{role: 'tablist'}
       %li.nav-item
-      %li.nav-item
-        %a#s1_20-tab.nav-link{'data-toggle'=>'tab', href: '#s1_20', role: 'tab', 'aria-controls'=>'all'}
-          = t('rankings.s1_20.title')
-      %li.nav-item
-        %a#s1_21-tab.nav-link{'data-toggle'=>'tab', href: '#s1_21', role: 'tab', 'aria-controls'=>'all'}
+        %a#s1_21-tab.nav-link.active{'data-toggle'=>'tab', href: '#s1_21', role: 'tab', 'aria-controls'=>'all'}
           = t('rankings.s1_21.title')
-      %li.nav-item
-        %a#s1_22-tab.nav-link{'data-toggle'=>'tab', href: '#s1_22', role: 'tab', 'aria-controls'=>'all'}
-          = t('rankings.s1_22.title')
+      -# %li.nav-item
+      -#   %a#s1_22-tab.nav-link{'data-toggle'=>'tab', href: '#s1_22', role: 'tab', 'aria-controls'=>'all'}
+      -#     = t('rankings.s1_22.title')
 
     .tab-content#power_rankings-tabs-content
-      -# Power Ranking S1&2 2020 -----------------------------------------------
-      .tab-pane.fade#s1_20{role: 'tabpanel', 'aria-labelledby'=>'s1_20-tab'}
-        = render 's1_20'
-
       -# Power Ranking S1 2021 -------------------------------------------------
-      .tab-pane.fade#s1_21{role: 'tabpanel', 'aria-labelledby'=>'s1_21-tab'}
+      .tab-pane.fade.show.active#s1_21{role: 'tabpanel', 'aria-labelledby'=>'s1_21-tab'}
         = render 's1_21'
+      -# -# Power Ranking S1 2022 ----------------------------------------------
+      -# .tab-pane.fade#s1_22{role: 'tabpanel', 'aria-labelledby'=>'s1_22-tab'}
+      -#   = render 's1_22'
 
-      -# Power Ranking S1 2022 -------------------------------------------------
-      .tab-pane.fade#s1_22{role: 'tabpanel', 'aria-labelledby'=>'s1_22-tab'}
-        = render 's1_22'
+  -# Regions -------------------------------------------------------------------
+  .tab-pane.fade#regions{role: 'tabpanel', 'aria-labelledby'=>'regions-tab'}
+    %ul#regions-tabs.nav.nav-pills.nav-fill{role: 'tablist'}
+      %li.nav-item
+        %a#region_berlin-tab.nav-link{'data-toggle'=>'tab', href: '#region_berlin', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_berlin.title')
+      %li.nav-item
+        %a#region_hessen-tab.nav-link{'data-toggle'=>'tab', href: '#region_hessen', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_hessen.title')
+      %li.nav-item
+        %a#region_nds-tab.nav-link{'data-toggle'=>'tab', href: '#region_nds', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_nds.title')
+      %li.nav-item
+        %a#region_norden-tab.nav-link{'data-toggle'=>'tab', href: '#region_norden', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_norden.title')
+      %li.nav-item
+        %a#region_nrw-tab.nav-link{'data-toggle'=>'tab', href: '#region_nrw', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_nrw.title')
+      %li.nav-item
+        %a#region_sueden-tab.nav-link{'data-toggle'=>'tab', href: '#region_sueden', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_sueden.title')
 
-  -# Points --------------------------------------------------------------------
-  .tab-pane.fade#points{role: 'tabpanel', 'aria-labelledby'=>'points-tab'}
-    = render 'points', players: @players
+    .tab-content#regions-tabs-content
+      .tab-pane.fade#region_berlin{role: 'tabpanel', 'aria-labelledby'=>'region_berlin-tab'}
+        = render 'region_berlin'
+      .tab-pane.fade#region_hessen{role: 'tabpanel', 'aria-labelledby'=>'region_hessen-tab'}
+        = render 'region_hessen'
+      .tab-pane.fade#region_nds{role: 'tabpanel', 'aria-labelledby'=>'region_nds-tab'}
+        = render 'region_nds'
+      .tab-pane.fade#region_norden{role: 'tabpanel', 'aria-labelledby'=>'region_norden-tab'}
+        = render 'region_norden'
+      .tab-pane.fade#region_nrw{role: 'tabpanel', 'aria-labelledby'=>'region_nrw-tab'}
+        = render 'region_nrw'
+      .tab-pane.fade#region_sueden{role: 'tabpanel', 'aria-labelledby'=>'region_sueden-tab'}
+        = render 'region_sueden'
