@@ -175,8 +175,8 @@ de:
     communities: "Regionen"
 
   information:
-    title: "Informationen"
-    title_short: "Infos"
+    title: "About"
+    title_short: "About"
     general:
       title: "Allgemein"
       germanysmash: |
@@ -193,7 +193,7 @@ de:
       title: "Power Ranking"
       power_ranking: "Power Ranking (PR)"
       power_ranking_body: "Ein Turnier wird als offizielles GermanySmash-Turnier gewertet und zählt zum PR, wenn folgende Voraussetzungen erfüllt sind:"
-      power_ranking_li_1: "Mindestens 2 Wochen vor dem Start auf germanysmash.de oder im Germany Smash Discord-Turnierkanal angekündigt"
+      power_ranking_li_1: "Mindestens 2 Wochen vor dem Start auf germanysmash.de angekündigt"
       power_ranking_li_2: "Mindestens 16 Teilnehmer"
       power_ranking_li_3: "Vernünftiges Seeding"
       power_ranking_li_4: "Genug einwandfrei funktionierende Setups mit angemessenen Sitzgelegenheiten"
