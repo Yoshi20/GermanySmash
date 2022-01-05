@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
   before_action :authenticate_user!, except: [
-    :index, :show, :location, :unregistered,
+    :index, :show, :location, :unregistered, :contact,
     :nrw, :hessen, :nds, :bayern, :berlin, :norden, :osten, :bawu
   ]
   before_action :configure_permitted_parameters, if: :devise_controller?
