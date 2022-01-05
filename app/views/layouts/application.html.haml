@@ -45,15 +45,25 @@
         .row.footer-nav
           .col-5
             .row
-              .col
-                %p.small
-                  = link_to t('navigation.footer.administrators_short'), :administrators
-              .col
-                %p.small
-                  = mail_to 'admin@germanysmash.de', t('navigation.footer.contact'), subject: t('navigation.footer.mail_subject'), body: t('navigation.footer.mail_body')
+              -# blup: not needed atm.
+              -# .col
+              -#   %p.small
+              -#     = link_to t('navigation.footer.administrators_short'), :administrators
+              -# .col
+              -#   %p.small
+              -#     = mail_to 'admin@germanysmash.de', t('navigation.footer.contact'), subject: t('navigation.footer.mail_subject'), body: t('navigation.footer.mail_body')
+
+
+              = link_to "https://smashcontest.de/", target: '_blank' do
+                = image_tag('smash_contest.png', class: 'smash_contest_logo', width: '128.25px', height: '75px')
+              -# .col
+              -#   %p.small
+              -#     = link_to "https://smashcontest.de/", target: '_blank', style: '' do
+              -#       = image_tag('smash_contest.png', width: '128.25px', height: '75px')
+
           .col-2
             = button_tag '', title: 'Go to top', style: 'background-color: #222; border: none;', class: 'scroll-top' do
-              = image_tag('logo.png', class: 'germanysmash_logo', eight: '50px', width: '50px')
+              = image_tag('logo.png', class: 'germanysmash_logo', height: '50px', width: '50px')
           .col-5
             .row
               .col

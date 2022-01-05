@@ -12,6 +12,16 @@
     padding-top: 1.3rem;
   }
 
+  .smash_contest_logo {
+    margin-top: 5px;
+    margin-left: 1rem;
+
+    @media screen and (max-width: 992px) {
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+  }
+
   .germanysmash_logo {
     margin-top: 1rem;
     margin-bottom: 1rem;
