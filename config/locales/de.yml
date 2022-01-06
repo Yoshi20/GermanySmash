@@ -164,18 +164,18 @@ de:
 
   welcome:
     title: "Smash Bros. Germany"
-    body0: "Willkommen bei Smash Bros. Germany, deinem Einstiegspunkt in die deutsche Super Smash Bros. Szene."
-    body1: "Du findest die bevorstehenden Ereignisse in der %{tournaments_link} oder im %{calendar_link}."
-    body2: "Deine regionale Community sollte unter %{communities} zu finden sein."
-    body3: "%{log_in_link} oder %{sign_up_link}, falls du das noch nicht getan hast, um an einem Turnier teilnehmen zu können."
-    body4: "Das offizielle Power Ranking von Deutschland findest du unter %{rankings_link}."
+    body0: "Willkommen bei Smash Bros. Germany, deinem Einstiegspunkt in die deutsche Super Smash Bros. Ultimate Turnier Szene."
+    body1: "Du findest die bevorstehenden Events in der %{tournaments_link} oder im %{calendar_link}."
+    body2: "Deine regionale Community sollte unter %{communities} zu finden sein. Dort triffst du auch Ansprechpartner aus deiner Region."
+    body3: "%{log_in_link} oder %{sign_up_link}, um alle funktionen nutzen zu können."
+    body4: "Das offizielle Power Ranking mit den besten Spielern Deutschlands findest du unter %{rankings_link}."
     body5: "Hier gehts zu allen auf GermanySmash registrierten %{players_link} und hier zu den %{statistics_link}."
-    body6: "Nähere Informationen zu GermanySmash findest du unter %{informations_link}."
-    tournament_list: "Turnier Liste"
+    body6: "Informationen zu GermanySmash findest du unter %{informations_link}."
+    tournament_list: "Turnierliste"
     calendar: "Kalender"
     log_in: "Logge dich ein"
-    sign_up: "melde dich an"
-    communities: "Regionen"
+    sign_up: "registriere dich"
+    communities: "Communities"
 
   information:
     title: "About"
@@ -599,7 +599,7 @@ de:
     players_videos: "%{player}'s Video%{s}:"
 
   communities:
-    title: "Regionen"
+    title: "Communities"
     nds: "#NDS"
     nrw: "#NRW"
     hessen: "#Hessen"

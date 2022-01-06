@@ -4,7 +4,7 @@ en:
   username: "Username"
   password: "Password"
   log_in: "Log in"
-  sign_up: "Sign up"
+  sign_up: "Register"
   w_l: "W/L"
   hi: "Hi"
   s12_2020: "S1&2/20"
@@ -164,18 +164,18 @@ en:
 
   welcome:
     title: "GermanySmash"
-    body0: "Welcome to Smash Bros. Germany, your entry point into the German Super Smash Bros. scene."
+    body0: "Welcome to Smash Bros. Germany, your entry point into the German Super Smash Bros. Ultimate tournament scene."
     body1: "You can find the upcoming events in the %{tournaments_link} or in the %{calendar_link}."
-    body2: "Your regional community should be able to be found under %{communities}."
-    body3: "%{log_in_link} or %{sign_up_link} if you haven't yet, to be able to join a tournament."
-    body4: "You can find the official Power Ranking of Germany under %{rankings_link}."
+    body2: "Your regional community should be able to be found under %{communities}. There you will also meet contacts from your region."
+    body3: "%{log_in_link} or %{sign_up_link}, to be able to use all functions."
+    body4: "You can find the official Power Ranking with the best players in Germany under %{rankings_link}."
     body5: "Here you can find all %{players_link} registered on GermanySmash and here you can find the %{statistics_link}."
-    body6: "More information about GermanySmash can be found under %{informations_link}."
+    body6: "Information about GermanySmash can be found under %{informations_link}."
     tournament_list: "Tournaments list"
     calendar: "Calendar"
     log_in: "Log in"
-    sign_up: "Sign up"
-    communities: "Regions"
+    sign_up: "register"
+    communities: "Communities"
 
   information:
     title: "About"
@@ -318,7 +318,7 @@ en:
       forgot_pw: "Forgot your password?"
     share:
       log_in: "Log in"
-      sign_up: "Sign up"
+      sign_up: "Register"
       forgot_pw: "Forgot your password?"
       no_conf_inst: "Didn't receive confirmation instructions?"
       no_unlock_inst: "Didn't receive unlock instructions?"
@@ -599,7 +599,7 @@ en:
     players_videos: "%{player}'s video%{s}:"
 
   communities:
-    title: "Regions"
+    title: "Communities"
     nds: "#NDS"
     nrw: "#NRW"
     hessen: "#Hesse"
@@ -638,7 +638,7 @@ en:
     delete_my_account: "Delete my account"
     unhappy: "Unhappy?"
     delete_account: "Delete account"
-    signing_up: "Signing up"
+    signing_up: "Registering"
     chars_min: "(%{pw_length} characters minimum)"
     password_confirmation: "Password confirmation"
     register: "Register"
