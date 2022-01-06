@@ -33,7 +33,10 @@
           - else
             .d-none.d-lg-block.col-lg-3
               .sidebar
-                = render '/partials/players'
+                -# = render '/partials/players'
+                %h2.sidebar__title
+                  = t('partials.streamers.title')
+                = render '/partials/streamers'
             .col-12.col-lg-6
               .content
                 = yield

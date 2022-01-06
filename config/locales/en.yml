@@ -161,6 +161,11 @@ en:
     players:
       title: "Top Players (2021)"
       player: "Player"
+    streamers:
+      title: "Current Streams"
+      streamer: "Streamer"
+      view_count: "#"
+      not_found: "No streams found"
 
   welcome:
     title: "GermanySmash"
