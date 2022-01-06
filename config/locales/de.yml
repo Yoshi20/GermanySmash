@@ -161,6 +161,11 @@ de:
     players:
       title: "Top Spieler (2021)"
       player: "Spieler"
+    streamers:
+      title: "Aktuelle Streams"
+      streamer: "Streamer"
+      view_count: "#"
+      not_found: "Keine Streams gefunden"
 
   welcome:
     title: "Smash Bros. Germany"
