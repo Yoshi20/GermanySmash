@@ -589,14 +589,31 @@ de:
 
   communities:
     title: "Communities"
-    nds: "#NDS"
-    nrw: "#NRW"
-    hessen: "#Hessen"
-    bawu: "#BaWü"
-    norden: "#Norden"
-    berlin: "#Berlin"
-    osten: "#Osten"
-    bayern: "#Bayern"
+    nds:
+      title: "#NDS"
+      text: "Die NDS-Region besteht aus den folgenden Bundesländer: Niedersachsen & Bremen"
+    nrw:
+      title: "#NRW"
+      text: "Die NRW-Region besteht aus den folgenden Bundesländer: Nordrhein-Westfalen"
+    hessen:
+      title: "#Hessen"
+      text: "Die Hessen-Region besteht aus den folgenden Bundesländer: Hessen, Rheinland-Pfalz & Saarland"
+    bawu:
+      title: "#BaWü"
+      text: "Die BaWü-Region besteht aus den folgenden Bundesländer: Baden-Württemberg"
+    norden:
+      title: "#Norden"
+      text: "Die Nord-Region besteht aus den folgenden Bundesländer: Schleswig-Holstein, Hamburg & Mecklenburg-Vorpommern"
+    berlin:
+      title: "#Berlin"
+      text: "Die Berlin-Region besteht aus den folgenden Bundesländer: Brandenburg & Berlin"
+    osten:
+      title: "#Osten"
+      text: "Die Ost-Region besteht aus den folgenden Bundesländer: Sachsen, Sachsen-Anhalt & Thüringen"
+    bayern:
+      title: "#Bayern"
+      text: "Die Bayern-Region besteht aus den folgenden Bundesländer: Bayern"
+    ranking: "Die besten Spieler aus der Region findest du hier:"
 
   users:
     mailer:

@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
       rescue OpenURI::HTTPError => ex
         puts ex
       end
-      if json_data.present? && json_data["data"].present?
+      if json_data.present? && !json_data["data"].nil?
         json_data["data"]
       else
         puts "=> No data parameter found! json_data = #{json_data.to_s}"
@@ -132,7 +132,7 @@ class ApplicationController < ActionController::Base
         rescue OpenURI::HTTPError => ex
           puts ex
         end
-        if json_data.present? && json_data["access_token"].present?
+        if json_data.present? && !json_data["access_token"].nil?
           json_data["access_token"]
         else
           puts "=> No access_token parameter found! json_data = #{json_data.to_s}"

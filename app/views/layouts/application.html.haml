@@ -42,7 +42,7 @@
                 = yield
             .d-none.d-lg-block.col-lg-3
               .sidebar
-                = render '/partials/events'
+                = render '/partials/events', next_tournaments: @nextTournaments
     .footer
       .container
         .row.footer-nav

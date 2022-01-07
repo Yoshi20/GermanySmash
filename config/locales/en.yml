@@ -589,14 +589,31 @@ en:
 
   communities:
     title: "Communities"
-    nds: "#NDS"
-    nrw: "#NRW"
-    hessen: "#Hesse"
-    bawu: "#BaWü"
-    norden: "#North"
-    berlin: "#Berlin"
-    osten: "#East"
-    bayern: "#Bavaria"
+    nds:
+      title: "#NDS"
+      text: "The NDS region consists of the following federal_states: Lower Saxony & Bremen"
+    nrw:
+      title: "#NRW"
+      text: "The NRW region consists of the following federal_states: Northrhine-Westphalia"
+    hessen:
+      title: "#Hesse"
+      text: "The Hesse region consists of the following federal_states: Hesse, Rhineland Palatinate & Saarland"
+    bawu:
+      title: "#BaWü"
+      text: "The BaWü region consists of the following federal_states: Baden-Württemberg"
+    norden:
+      title: "#North"
+      text: "The North region consists of the following federal_states: Schleswig Holstein, Hamburg & Mecklenburg Western Pomerania"
+    berlin:
+      title: "#Berlin"
+      text: "The Berlin region consists of the following federal_states: Brandenburg & Berlin"
+    osten:
+      title: "#East"
+      text: "The East region consists of the following federal_states: Saxony, Saxony-Anhalt & Thuringia"
+    bayern:
+      title: "#Bavaria"
+      text: "The Bavaria region consists of the following federal_states: Bavaria"
+    ranking: "The best players from the region can be found here:"
 
   users:
     mailer:
