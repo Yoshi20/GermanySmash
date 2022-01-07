@@ -8,9 +8,6 @@
   .col
     %p= "Total users count = #{User.all.count}"
     .d-flex
-      %span.material-icons.admin-actions__link__icon= 'group_add'
-      = '= Club Member'
-    .d-flex
       %span.material-icons.admin-actions__link__icon= 'verified_user'
       = '= Admin'
   - if current_user.present? and current_user.super_admin?
