@@ -50,6 +50,9 @@
         %a#region_nrw-tab.nav-link{'data-toggle'=>'tab', href: '#region_nrw', role: 'tab', 'aria-controls'=>'all'}
           = t('rankings.region_nrw.title')
       %li.nav-item
+        %a#region_osten-tab.nav-link{'data-toggle'=>'tab', href: '#region_osten', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_osten.title')
+      %li.nav-item
         %a#region_sueden-tab.nav-link{'data-toggle'=>'tab', href: '#region_sueden', role: 'tab', 'aria-controls'=>'all'}
           = t('rankings.region_sueden.title')
 
@@ -64,6 +67,8 @@
         = render 'region_norden'
       .tab-pane.fade#region_nrw{role: 'tabpanel', 'aria-labelledby'=>'region_nrw-tab'}
         = render 'region_nrw'
+      .tab-pane.fade#region_osten{role: 'tabpanel', 'aria-labelledby'=>'region_osten-tab'}
+        = render 'region_osten'
       .tab-pane.fade#region_sueden{role: 'tabpanel', 'aria-labelledby'=>'region_sueden-tab'}
         = render 'region_sueden'
 

@@ -425,6 +425,8 @@ de:
       title: "NDS"
     region_norden:
       title: "Norden"
+    region_osten:
+      title: "Osten"
     region_sueden:
       title: "Süden"
 

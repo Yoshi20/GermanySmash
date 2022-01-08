@@ -15,14 +15,13 @@
           .col
             = render '/partials/discord_invite', discord_invite: discord_invite
 
--# blup: no osten-ranking?
--# .row
--#   .col{style: 'text-align: center;'}
--#     %h2= t('rankings.title')
--#     .row
--#       .col
--#         = t('communities.ranking')
--#         = link_to 'rankings#region_osten', '/rankings#region_osten'
+.row
+  .col{style: 'text-align: center;'}
+    %h2= t('rankings.title')
+    .row
+      .col
+        = t('communities.ranking')
+        = link_to 'rankings#region_osten', '/rankings#region_osten'
 %br
 
 - if @next_region_tournaments.any?
