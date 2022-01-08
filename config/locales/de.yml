@@ -409,9 +409,13 @@ de:
       seed_points: "Seed Punkte"
       note: "(Hinweis: Nur bei GermanySmash registrierte Spieler erscheinen in dieser Rangliste)"
     no_players_found: "Noch keine Spieler gefunden"
+    s1_19:
+      title: "Saison 1 2019"
+    s2_19:
+      title: "Saison 2 2019"
     s1_21:
-      title: "Saison 1&2 2021"
-      no_ranking: "Das Ranking erscheint voraussichtlich mitte 2022"
+      title: "2020 & 2021"
+      no_ranking: "Für 2020 und 2021 wurde aufgrund von Covid-19 auf ein offizielles Ranking verzichtet."
     # s1_22:
     #   title: "Saison 1&2 2022"
     #   no_ranking: "Das Ranking erscheint voraussichtlich im Januar 2023"
