@@ -11,21 +11,15 @@
   %li.nav-item
     %a#calendar-tab.nav-link{'data-toggle'=>'tab', href: '#calendar', role: 'tab', 'aria-controls'=>'all'}
       = t('information.calendar.title')
-  %li.nav-item
-    %a#power-ranking-tab.nav-link{'data-toggle'=>'tab', href: '#power-ranking', role: 'tab', 'aria-controls'=>'all'}
-      = t('information.power_ranking.title')
+  -# %li.nav-item
+  -#   %a#power-ranking-tab.nav-link{'data-toggle'=>'tab', href: '#power-ranking', role: 'tab', 'aria-controls'=>'all'}
+  -#     = t('information.power_ranking.title')
   %li.nav-item
     %a#tournament-manager-tab.nav-link{'data-toggle'=>'tab', href: '#tournament-manager', role: 'tab', 'aria-controls'=>'all'}
       = t('information.tournament_manager.title')
   %li.nav-item
     %a#results-tab.nav-link{'data-toggle'=>'tab', href: '#results', role: 'tab', 'aria-controls'=>'all'}
       = t('information.results.title')
-  %li.nav-item
-    %a#seeding-tab.nav-link{'data-toggle'=>'tab', href: '#seeding', role: 'tab', 'aria-controls'=>'all'}
-      = t('information.seeding.title')
-  %li.nav-item
-    %a#personal-data-tab.nav-link{'data-toggle'=>'tab', href: '#personal-data', role: 'tab', 'aria-controls'=>'all'}
-      = t('information.personal_data.title')
   %li.nav-item
     %a#contact-tab.nav-link{'data-toggle'=>'tab', href: '#contact', role: 'tab', 'aria-controls'=>'all'}
       = t('navigation.footer.contact')
@@ -37,7 +31,7 @@
       .col
         %h2 GermanySmash.de
         %p
-          = t('information.general.germanysmash').html_safe
+          = t('information.general.germanysmash', swisssmash_link: link_to('www.swisssmash.ch', 'https://www.swisssmash.ch/', target: '_blank'), Yomi: link_to('Yomi', '/players/1'), TaDavidID: link_to('TaDavidID', '/players/2')).html_safe
   -# calendar
   .tab-pane.fade.show#calendar{role: 'tabpanel', 'aria-labelledby'=>'calendar-tab'}
     .row
@@ -61,30 +55,41 @@
           %br
           %span.circle{style: "background: cornflowerblue;"}
           %span= t('information.calendar.calendar_external')
-  -# power-ranking
-  .tab-pane.fade.show#power-ranking{role: 'tabpanel', 'aria-labelledby'=>'power-ranking-tab'}
-    .row
-      .col
-        %h2= t('information.power_ranking.power_ranking')
-        %p= t('information.power_ranking.power_ranking_body')
-        %ul
-          %li= t('information.power_ranking.power_ranking_li_1')
-          %li= t('information.power_ranking.power_ranking_li_2')
-          %li= t('information.power_ranking.power_ranking_li_3')
-          %li= t('information.power_ranking.power_ranking_li_4')
-          %li= t('information.power_ranking.power_ranking_li_5')
-          %li= t('information.power_ranking.power_ranking_li_6')
+  -# -# power-ranking
+  -# .tab-pane.fade.show#power-ranking{role: 'tabpanel', 'aria-labelledby'=>'power-ranking-tab'}
+  -#   .row
+  -#     .col
+  -#       %h2= t('information.power_ranking.power_ranking')
+  -#       %p= t('information.power_ranking.power_ranking_body')
+  -#       %ul
+  -#         %li= t('information.power_ranking.power_ranking_li_1')
+  -#         %li= t('information.power_ranking.power_ranking_li_2')
+  -#         %li= t('information.power_ranking.power_ranking_li_3')
+  -#         %li= t('information.power_ranking.power_ranking_li_4')
+  -#         %li= t('information.power_ranking.power_ranking_li_5')
+  -#         %li= t('information.power_ranking.power_ranking_li_6')
   -# tournament-manager
   .tab-pane.fade.show#tournament-manager{role: 'tabpanel', 'aria-labelledby'=>'tournament-manager-tab'}
+    .row.mt-3
+      .col
+        %h2= t('information.tournament_manager.tournament_organiser')
+        %p= t('information.tournament_manager.tournament_organiser_body', link: mail_to('admin@germanysmash.de', t('information.tournament_manager.tournament_organiser_mail'), subject: t('information.tournament_manager.tournament_organiser_mail_subject'), body: t('information.tournament_manager.tournament_organiser_mail_body'))).html_safe
     .row
       .col
         %h2= t('information.tournament_manager.bracket_tool')
         %p
           = t('information.tournament_manager.bracket_tool_body', link: link_to('Challonge', 'https://challonge.com/', target: '_blank')).html_safe
-    .row.mt-3
+    .row
       .col
-        %h2= t('information.tournament_manager.tournament_organiser')
-        %p= t('information.tournament_manager.tournament_organiser_body', link: mail_to('admin@germanysmash.de', t('information.tournament_manager.tournament_organiser_mail'), subject: t('information.tournament_manager.tournament_organiser_mail_subject'), body: t('information.tournament_manager.tournament_organiser_mail_body'))).html_safe
+        %h2= t('information.tournament_manager.bracket_seeding')
+        %p
+          = t('information.tournament_manager.bracket_seeding_body1')
+          %br
+          %div{style: 'margin-left: 20px;'}
+            %i player_skill = points/participations + wins/(wins+losses)*100 + participations + self_assessment/5 + tournament_experience/10
+          %br
+          = t('information.tournament_manager.bracket_seeding_body2')
+
   -# results
   .tab-pane.fade.show#results{role: 'tabpanel', 'aria-labelledby'=>'results-tab'}
     .row
@@ -137,24 +142,6 @@
             %tr
               %td.text-center= '>'+32.ordinalize
               %td.text-center 5
-  -# seeding
-  .tab-pane.fade.show#seeding{role: 'tabpanel', 'aria-labelledby'=>'seeding-tab'}
-    .row.mt-3
-      .col
-        %h2= t('information.seeding.seeding')
-        %p
-          = t('information.seeding.seeding_body1')
-          %br
-          %div{style: 'margin-left: 20px;'}
-            %i player_skill = points/participations + wins/(wins+losses)*100 + participations + self_assessment/5 + tournament_experience/10
-          %br
-          = t('information.seeding.seeding_body2')
-  -# personal-data
-  .tab-pane.fade.show#personal-data{role: 'tabpanel', 'aria-labelledby'=>'personal-data-tab'}
-    .row
-      .col
-        %h2= t('information.personal_data.title')
-        %p= t('information.personal_data.personal_data_body').html_safe
   -# contact
   .tab-pane.fade.show#contact{role: 'tabpanel', 'aria-labelledby'=>'contact-tab'}
     .row
