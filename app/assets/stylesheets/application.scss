@@ -137,8 +137,8 @@ a.disabled {
 }
 
 .cookies-eu {
-  top: 0;
-  bottom: unset;
+  // top: 0;
+  // bottom: unset;
   @media screen and (max-width: 767px) {
     position: fixed;
   }
