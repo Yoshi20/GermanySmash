@@ -211,7 +211,7 @@ de:
     tournament_manager:
       title: "Turniermanager"
       tournament_organiser: "Turnierveranstalter"
-      tournament_organiser_body: "GermanySmash.de beinhaltet eine Webanwendung zum einfachen Erstellen und Verwalten von Smash Turnieren.<br><br>Er ist insbesondere für Weeklies geeignet, da er das Generieren von mehreren Turniere in einem definierten Zeitraum erlaubt.<br><br>Organisierst du selbst Turniere und möchtest den GermanySmash-Turniermanager nutzen? Schreib uns einfach eine %{link}."
+      tournament_organiser_body: "GermanySmash.de beinhaltet eine Webanwendung zum einfachen Erstellen und Verwalten von Smash Turnieren.<br><br>Sie ist insbesondere für Weeklies geeignet, da sie das Generieren von mehreren Turniere in einem definierten Zeitraum erlaubt.<br><br>Organisierst du selbst Turniere und möchtest den GermanySmash-Turniermanager nutzen? Schreib uns einfach eine %{link}."
       tournament_organiser_mail: "Email"
       tournament_organiser_mail_subject: "Ich möchte Administrator werden!"
       tournament_organiser_mail_body: "Hi GermanySmash\n\nIch bin ??? und ich möchte ein Administrator sein weil:\n???"
@@ -641,6 +641,7 @@ de:
     wants_weekly_email: "Informiere mich wenn ein Weekly Turnier hinzugefügt wurde"
     allows_emails_from_germanysmash: "Ich bin damit einverstanden, dass GermanySmash mir ab und zu Emails zu wichtigen Themen der Community & grossen Turnierankündigungen schickt"
     allows_emails_from_partners: "Ich bin damit einverstanden, dass Partner von GermanySmash mir ab und zu Emails schicken"
+    data_agreement: "(Pflichtfeld) Ich willige ein, dass meine Daten öffentlich über mein Spielerprofil einsehbar sein werden und für die Spieler-Statistik genutzt werden. Die bereitgestellten Daten lassen sich jederzeit über \"Bearbeite Profil\" bzw. \"Account\" bearbeiten oder löschen"
     current_password: "Aktuelles Passwort"
     enter_current_password: "(gib dein aktuelles Passwort ein um die Änderungen zu bestätigen)"
     delete_my_account: "Mein Account löschen"

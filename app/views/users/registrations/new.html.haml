@@ -84,19 +84,20 @@
       -#     = f.label :wants_major_email, t('users.wants_major_email'), class:'form-check-label'
       -# .form-group
       -#   .form-check
-      -#     = params[:wants_weekly_email]
       -#     = f.check_box :wants_weekly_email, checked: (params[:user].present? ? (params[:user][:wants_weekly_email] == "1") : true), class:'form-check-input mr-2'
       -#     = f.label :wants_weekly_email, t('users.wants_weekly_email'), class:'form-check-label'
       .form-group
         .form-check
-          = params[:allows_emails_from_germanysmash]
           = f.check_box :allows_emails_from_germanysmash, checked: (params[:user].present? ? (params[:user][:allows_emails_from_germanysmash] == "1") : true), class:'form-check-input mr-2'
           = f.label :allows_emails_from_germanysmash, t('users.allows_emails_from_germanysmash'), class:'form-check-label'
       .form-group
         .form-check
-          = params[:allows_emails_from_partners]
           = f.check_box :allows_emails_from_partners, checked: (params[:user].present? ? (params[:user][:allows_emails_from_partners] == "1") : true), class:'form-check-input mr-2'
           = f.label :allows_emails_from_partners, t('users.allows_emails_from_partners'), class:'form-check-label'
+      .form-group
+        .form-check
+          %input{type:"checkbox", onclick:"return false;", checked:'true', class:'form-check-input mr-2'}
+          = label_tag :data_agreement, t('users.data_agreement'), class:'form-check-label'
       .form-group
         = recaptcha_tags
       .form-group
