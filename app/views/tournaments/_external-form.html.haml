@@ -19,7 +19,7 @@
     .form-group
       = f.label :date, t('tournaments.start_date')
       .form-group-inline
-        = f.datetime_select :date, { start_year: Time.now.year }, class: 'form-control'
+        = f.datetime_select :date, { start_year: @tournament.new_record? ? Time.now.year : 2019 }, class: 'form-control'
     .form-group
       = f.label :name, t('tournaments.name')
       = f.text_field :name, class: 'form-control', placeholder: t('tournaments.name_placeholder')

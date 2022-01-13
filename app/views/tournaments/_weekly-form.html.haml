@@ -19,15 +19,15 @@
     .form-group
       = f.label :registration_deadline, t('tournaments.registration_deadline')
       .form-group-inline
-        = f.datetime_select :registration_deadline, {start_year: Time.now.year}, class: 'form-control'
+        = f.datetime_select :registration_deadline, {start_year: @tournament.new_record? ? Time.now.year : 2019}, class: 'form-control'
     .form-group
       = f.label :date, t('tournaments.weekly_start_date')
       .form-group-inline
-        = f.datetime_select :date, {start_year: Time.now.year}, class: 'form-control'
+        = f.datetime_select :date, {start_year: @tournament.new_record? ? Time.now.year : 2019}, class: 'form-control'
     .form-group{class: (@tournament.new_record? ? '' : 'd-none')}
       = f.label :end_date, t('tournaments.weekly_end_date')
       .form-group-inline
-        = f.datetime_select :end_date,{ start_year: Time.now.year}, class: 'form-control'
+        = f.datetime_select :end_date,{ start_year: @tournament.new_record? ? Time.now.year : 2019}, class: 'form-control'
     .form-group{class: (@tournament.new_record? ? 'd-none' : '')}
       = f.label :name, t('tournaments.name')
       %em= t('tournaments.readonly')
