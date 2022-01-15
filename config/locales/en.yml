@@ -236,6 +236,8 @@ en:
 
   calendar:
     title: "Calendar"
+    switzerland: "Switzerland"
+    austria: "Austria"
     color_legend:
       past: "Past"
       cancelled: "Cancelled"
@@ -591,6 +593,7 @@ en:
 
   communities:
     title: "Communities"
+    body: "The German SSBU Community can be roughly divided into eight regions. Click on a federal state to find out more about the associated region."
     nds:
       title: "#NDS"
       text: "The NDS region consists of the following federal_states: Lower Saxony & Bremen"

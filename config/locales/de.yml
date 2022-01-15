@@ -236,6 +236,8 @@ de:
 
   calendar:
     title: "Kalender"
+    switzerland: "Schweiz"
+    austria: "Österreich"
     color_legend:
       past: "Vergangen"
       cancelled: "Storniert"
@@ -591,6 +593,7 @@ de:
 
   communities:
     title: "Communities"
+    body: "Die Deutsche SSBU Community kann grob in acht Regionen eingeteilt werden. Klicke auf ein Bundesland, um mehr über die dazugehörgie Region zu erfahren."
     nds:
       title: "#NDS"
       text: "Die NDS-Region besteht aus den folgenden Bundesländer: Niedersachsen & Bremen"
