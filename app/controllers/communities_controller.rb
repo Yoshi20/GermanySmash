@@ -73,7 +73,7 @@ class CommunitiesController < ApplicationController
   # GET /communities/norden
   def norden
     community_federal_states = ['SH', 'HH', 'MV']
-    discord_keys = ['GHS8Q5Y', 'gED9Cbm', 'udNKmTK', 'XpjNsRp']
+    discord_keys = ['GHS8Q5Y', 'udNKmTK', 'XpjNsRp']
     @next_region_tournaments = Tournament.active.upcoming.where(federal_state: community_federal_states).order(date: :asc).limit(10)
     @region_administartors = User.where(is_admin: true).joins(:player).where("players.federal_state IN (?)", community_federal_states)
     @discord_invites_json = []
