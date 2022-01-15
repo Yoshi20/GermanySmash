@@ -435,8 +435,10 @@ de:
       title: "Norden"
     region_osten:
       title: "Osten"
-    region_sueden:
-      title: "Süden"
+    region_bawu:
+      title: "BaWü"
+    region_bayern:
+      title: "Bayern"
 
   rules:
     title: "Regeln"

@@ -53,6 +53,12 @@
   .tab-pane.fade#region{role: 'tabpanel', 'aria-labelledby'=>'region-tab'}
     %ul#region-tabs.nav.nav-pills.nav-fill{role: 'tablist'}
       %li.nav-item
+        %a#region_bawu-tab.nav-link{'data-toggle'=>'tab', href: '#region_bawu', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_bawu.title')
+      %li.nav-item
+        %a#region_bayern-tab.nav-link{'data-toggle'=>'tab', href: '#region_bayern', role: 'tab', 'aria-controls'=>'all'}
+          = t('rankings.region_bayern.title')
+      %li.nav-item
         %a#region_berlin-tab.nav-link{'data-toggle'=>'tab', href: '#region_berlin', role: 'tab', 'aria-controls'=>'all'}
           = t('rankings.region_berlin.title')
       %li.nav-item
@@ -70,11 +76,12 @@
       %li.nav-item
         %a#region_osten-tab.nav-link{'data-toggle'=>'tab', href: '#region_osten', role: 'tab', 'aria-controls'=>'all'}
           = t('rankings.region_osten.title')
-      %li.nav-item
-        %a#region_sueden-tab.nav-link{'data-toggle'=>'tab', href: '#region_sueden', role: 'tab', 'aria-controls'=>'all'}
-          = t('rankings.region_sueden.title')
 
     .tab-content#region-tabs-content
+      .tab-pane.fade#region_bawu{role: 'tabpanel', 'aria-labelledby'=>'region_bawu-tab'}
+        = render 'region_bawu'
+      .tab-pane.fade#region_bayern{role: 'tabpanel', 'aria-labelledby'=>'region_bayern-tab'}
+        = render 'region_bayern'
       .tab-pane.fade#region_berlin{role: 'tabpanel', 'aria-labelledby'=>'region_berlin-tab'}
         = render 'region_berlin'
       .tab-pane.fade#region_hessen{role: 'tabpanel', 'aria-labelledby'=>'region_hessen-tab'}
@@ -87,8 +94,6 @@
         = render 'region_nrw'
       .tab-pane.fade#region_osten{role: 'tabpanel', 'aria-labelledby'=>'region_osten-tab'}
         = render 'region_osten'
-      .tab-pane.fade#region_sueden{role: 'tabpanel', 'aria-labelledby'=>'region_sueden-tab'}
-        = render 'region_sueden'
 
 :javascript
   document.addEventListener('turbolinks:load', function() {
