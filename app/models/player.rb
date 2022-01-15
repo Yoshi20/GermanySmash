@@ -11,6 +11,7 @@ class Player < ApplicationRecord
   validates :gamer_tag, uniqueness: true, presence: true
   validates :prefix, length: { maximum: 12 }
 
+  scope :all_de, -> { where(country_code: 'de') }
   scope :from_2022, -> { where('created_at >= ? AND created_at < ?', Time.local(2022,1,1), Time.local(2023,1,1)) }
 
   MAX_PLAYERS_PER_PAGE = 50

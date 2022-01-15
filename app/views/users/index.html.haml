@@ -6,14 +6,14 @@
 
 .row
   .col
-    %p= "Total users count = #{User.all.count}"
+    %p= "Total users count = #{User.all_de.all.count}"
     .d-flex
       %span.material-icons.admin-actions__link__icon= 'verified_user'
       = '= Admin'
   - if current_user.present? and current_user.super_admin?
     .col{style: 'text-align: right;'}
       - mail_string = ''
-      - User.where(is_admin: true).each do |u|
+      - User.all_de.where(is_admin: true).each do |u|
         - mail_string = mail_string + u.email + '; '
       = mail_to "", "Write all admins an email", bcc: mail_string, subject: "GermanySmash", body: "Hi GermanySmash admins\n\n", class: 'btn btn-default'
 

@@ -158,6 +158,7 @@ ActiveRecord::Schema.define(version: 2022_01_15_182334) do
     t.string "area_of_responsibility"
     t.boolean "allows_emails_from_germanysmash", default: true
     t.boolean "allows_emails_from_partners", default: true
+    t.boolean "allows_emails_from_swisssmash", default: true
     t.string "country_code", default: "de"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

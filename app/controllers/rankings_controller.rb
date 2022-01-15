@@ -6,7 +6,7 @@ class RankingsController < ApplicationController
   # GET /rankings
   # GET /rankings.json
   def index
-    @players = Player.all.includes(:user)
+    @players = Player.all_de.includes(:user)
     if params[:filter].nil? or params[:filter] == 'all'
       @players = @players.where('participations >= 3').sort_by do |p|
         [p.points.to_f/p.participations, p.participations, -p.created_at.to_i]

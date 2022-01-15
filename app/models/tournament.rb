@@ -6,6 +6,7 @@ class Tournament < ApplicationRecord
 
   validates :name, uniqueness: true, presence: true
 
+  scope :all_de, -> { where(country_code: 'de') }
   scope :active, -> { where(active: true) }
   scope :upcoming, -> { where('date > ?', Time.now) }
   scope :upcoming_with_today, -> { where('date >= ?', Time.now.beginning_of_day) }

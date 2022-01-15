@@ -6,6 +6,7 @@ class User < ApplicationRecord
   attr_accessor :login
 
   before_validation :strip_whitespace
+  before_create :set_country_code
 
   validates :username,
     :presence => true,
@@ -14,7 +15,8 @@ class User < ApplicationRecord
     }
 
   validate :validate_username
-  before_create :set_country_code
+
+  scope :all_de, -> { where(country_code: 'de') }
 
   MAX_USERS_PER_PAGE = 100
 
