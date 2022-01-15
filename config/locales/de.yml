@@ -176,6 +176,7 @@ de:
     body4: "Das offizielle Power Ranking mit den besten Spielern Deutschlands findest du unter %{rankings_link}."
     body5: "Hier gehts zu allen auf GermanySmash registrierten %{players_link} und hier zu den %{statistics_link}."
     body6: "Informationen zu GermanySmash findest du unter %{informations_link}."
+    body7: "Wenn du dich mit der deutschen Melee Community verbinden möchtest, besuche %{meele_link}."
     tournament_list: "Turnierliste"
     calendar: "Kalender"
     log_in: "Logge dich ein"

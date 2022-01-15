@@ -176,6 +176,7 @@ en:
     body4: "You can find the official Power Ranking with the best players in Germany under %{rankings_link}."
     body5: "Here you can find all %{players_link} registered on GermanySmash and here you can find the %{statistics_link}."
     body6: "Information about GermanySmash can be found under %{informations_link}."
+    body7: "If you want to connect to the german Melee community, visit %{meele_link}."
     tournament_list: "Tournaments list"
     calendar: "Calendar"
     log_in: "Log in"
