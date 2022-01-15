@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_paper_trail_whodunnit
   before_action :set_streamers
-  before_action :set_top_players
+  # before_action :set_top_players
   before_action :get_next_tournaments
   before_action :prepare_exception_notifier
   after_action :set_response_language_header

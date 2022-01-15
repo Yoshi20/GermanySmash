@@ -48,6 +48,9 @@
         .tournaments__filter__button= link_to t('external'), tournaments_path(search: params[:search], filter: 'external', anchor: 'upcoming'), class: "btn #{params[:filter] == 'external' ? 'btn-ghost' : 'btn-default'}"
         .tournaments__filter__button= link_to t('internal'), tournaments_path(search: params[:search], filter: 'internal', anchor: 'upcoming'), class: "btn #{params[:filter] == 'internal' ? 'btn-ghost' : 'btn-default'}"
         .tournaments__filter__button= link_to t('weekly'), tournaments_path(search: params[:search], filter: 'weekly', anchor: 'upcoming'), class: "btn #{params[:filter] == 'weekly' ? 'btn-ghost' : 'btn-default'}"
+      .row.without_col
+        - federal_states_raw.each do |federal_state|
+          .tournaments__filter__button= link_to t(federal_state, scope: 'defines.federal_states'), tournaments_path(search: params[:search], filter: federal_state.downcase, anchor: 'upcoming'), class: "btn #{params[:filter] == federal_state.downcase ? 'btn-ghost' : 'btn-default'}"
 
     %table.table.table-hover.table-tournaments
       %thead.table-header
@@ -67,10 +70,17 @@
       .row.without_col
         .tournaments__filter__button= link_to t('tournaments.all'), tournaments_path(search: params[:search], filter: 'all', anchor: 'past'), class: "btn #{(params[:filter].nil? or params[:filter].empty? or params[:filter] == 'all') ? 'btn-ghost' : 'btn-default'}"
         .tournaments__filter__button= link_to t('s12_2022'), tournaments_path(search: params[:search], filter: 's12_2022', anchor: 'past'), class: "btn #{params[:filter] == 's12_2022' ? 'btn-ghost' : 'btn-default'}"
+        .tournaments__filter__button= link_to t('s12_2021'), tournaments_path(search: params[:search], filter: 's12_2021', anchor: 'past'), class: "btn #{params[:filter] == 's12_2021' ? 'btn-ghost' : 'btn-default'}"
+        .tournaments__filter__button= link_to t('s12_2020'), tournaments_path(search: params[:search], filter: 's12_2020', anchor: 'past'), class: "btn #{params[:filter] == 's12_2020' ? 'btn-ghost' : 'btn-default'}"
+        .tournaments__filter__button= link_to t('s2_2019'), tournaments_path(search: params[:search], filter: 's2_2019', anchor: 'past'), class: "btn #{params[:filter] == 's2_2019' ? 'btn-ghost' : 'btn-default'}"
+        .tournaments__filter__button= link_to t('s1_2019'), tournaments_path(search: params[:search], filter: 's1_2019', anchor: 'past'), class: "btn #{params[:filter] == 's1_2019' ? 'btn-ghost' : 'btn-default'}"
       .row.without_col
         .tournaments__filter__button= link_to t('external'), tournaments_path(search: params[:search], filter: 'external', anchor: 'past'), class: "btn #{params[:filter] == 'external' ? 'btn-ghost' : 'btn-default'}"
         .tournaments__filter__button= link_to t('internal'), tournaments_path(search: params[:search], filter: 'internal', anchor: 'past'), class: "btn #{params[:filter] == 'internal' ? 'btn-ghost' : 'btn-default'}"
         .tournaments__filter__button= link_to t('weekly'), tournaments_path(search: params[:search], filter: 'weekly', anchor: 'past'), class: "btn #{params[:filter] == 'weekly' ? 'btn-ghost' : 'btn-default'}"
+      .row.without_col
+        - federal_states_raw.each do |federal_state|
+          .tournaments__filter__button= link_to t(federal_state, scope: 'defines.federal_states'), tournaments_path(search: params[:search], filter: federal_state.downcase, anchor: 'past'), class: "btn #{params[:filter] == federal_state.downcase ? 'btn-ghost' : 'btn-default'}"
 
     %table.table.table-hover.table-tournaments
       %thead.table-header
