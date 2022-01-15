@@ -14,6 +14,7 @@ class User < ApplicationRecord
     }
 
   validate :validate_username
+  before_create :set_country_code
 
   MAX_USERS_PER_PAGE = 100
 
