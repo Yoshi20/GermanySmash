@@ -392,8 +392,8 @@ en:
     individuals: "List"
 
   statistics:
-    title: "Statistics"
-    title2: "Player statistics"
+    title: "Overview"
+    title2: "Player overview"
     count_total: "Total registered players on GermanySmash"
     in_2022: "in 2022"
     youngest: "Youngest"

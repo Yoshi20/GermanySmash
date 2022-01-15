@@ -174,7 +174,7 @@ de:
     body2: "Deine regionale Community sollte unter %{communities} zu finden sein. Dort triffst du auch Ansprechpartner aus deiner Region."
     body3: "%{log_in_link} oder %{sign_up_link}, um alle funktionen nutzen zu können."
     body4: "Das offizielle Power Ranking mit den besten Spielern Deutschlands findest du unter %{rankings_link}."
-    body5: "Hier gehts zu allen auf GermanySmash registrierten %{players_link} und hier zu den %{statistics_link}."
+    body5: "Hier gehts zu allen auf GermanySmash registrierten %{players_link} und hier zu der %{statistics_link}."
     body6: "Informationen zu GermanySmash findest du unter %{informations_link}."
     body7: "Wenn du dich mit der deutschen Melee Community verbinden möchtest, besuche %{meele_link}."
     tournament_list: "Turnierliste"
@@ -392,8 +392,8 @@ de:
     individuals: "Liste"
 
   statistics:
-    title: "Statistiken"
-    title2: "Spielerstatistiken"
+    title: "Übersicht"
+    title2: "Spielerübersicht"
     count_total: "Total bei GermanySmash registrierte Spieler"
     in_2022: "im 2022"
     youngest: "Jüngste"
