@@ -22,7 +22,7 @@ Prod commands:
 - heroku restart
 
 - heroku run rake tournaments_crawler:all
-<!-- - heroku run rake results_crawler:all -->
+- heroku run rake results_crawler:all
 - heroku run rake "utils:remove_player_from_finished_tournament[<t_id>,<p_id>]"
 
 General links:
