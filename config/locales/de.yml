@@ -241,6 +241,7 @@ de:
   calendar:
     title: "Kalender"
     switzerland: "Schweiz"
+    france: "France"
     austria: "Österreich"
     color_legend:
       past: "Vergangen"
