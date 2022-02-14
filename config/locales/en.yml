@@ -185,6 +185,11 @@ en:
     log_in: "Log in"
     sign_up: "register"
     communities: "Communities"
+    no_donations_yet: "No donations yet 😢"
+    all_donations: "All donations"
+
+  donations:
+    title: "Donation wall"
 
   information:
     title: "About"
@@ -368,12 +373,15 @@ en:
     best_rank: "Best rank"
     wins: "Wins"
     losses: "Losses"
+    canton: "Canton"
+    region: "Region"
     federal_state: "Federal state"
     gender: "Gender"
     birth_year: "Birth year"
     self_assessment: "Self assessment"
     tournament_experience: "Tournament experience"
     main_characters: "Main characters"
+    main_character_skins: "Character skins"
     up_to_three: "(you can select up to three)"
     comment: "Comment"
     for_what_ever: "(for whatever you want to tell the world)"

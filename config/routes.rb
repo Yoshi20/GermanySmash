@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   get 'calendar' => 'calendar#index'
   get 'calendar_for_iframe' => 'calendar#show'
 
+  get 'character_skins' => 'character_skins#show'
+
   post 'contact' => 'contact#contact'
+
+  get 'donations' => 'donations#index'
+  post 'donation' => 'donations#donation'
 
   get 'rankings' => 'rankings#index'
 

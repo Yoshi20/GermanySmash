@@ -185,6 +185,11 @@ de:
     log_in: "Logge dich ein"
     sign_up: "registriere dich"
     communities: "Communities"
+    no_donations_yet: "Noch keine Spenden vorhanden 😢"
+    all_donations: "Alle Spenden"
+
+  donations:
+    title: "Spendewand"
 
   information:
     title: "About"
@@ -368,12 +373,15 @@ de:
     best_rank: "Bester Rang"
     wins: "Siege"
     losses: "Niederlagen"
+    canton: "Kanton"
+    region: "Region"
     federal_state: "Bundesland"
     gender: "Geschlecht"
     birth_year: "Geburtsjahr"
     self_assessment: "Selbsteinschätzung"
     tournament_experience: "Turniererfahrung"
     main_characters: "Main Charaktere"
+    main_character_skins: "Charaktere Skins"
     up_to_three: "(du kannst bis zu drei auswählen)"
     comment: "Kommentar"
     for_what_ever: "(für was auch immer du der Welt erzählen möchtest)"
