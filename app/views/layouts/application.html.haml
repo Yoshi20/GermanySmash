@@ -54,7 +54,7 @@
                   - if @donations.any? && Donation.count > 6
                     .row.text-center
                       .col
-                        = link_to t('welcome.all_donations'), donations_path, class:'btn btn-sstm'
+                        = link_to t('welcome.all_donations'), donations_path, class:'btn btn-default'
             .d-none.d-lg-block.col-lg-3
               .sidebar
                 = render '/partials/events', next_tournaments: @nextTournaments
@@ -87,8 +87,8 @@
               .col
                 %p#donate-btn
                   = link_to("https://ko-fi.com/germanysmash", target: '_blank', class: "btn btn-default") do
-                    = image_tag("https://storage.ko-fi.com/cdn/cup-border.png", style: 'width: 39px;')
-                    %span{:style => "margin-left: 8px; color:#fff; font-weight: 700;"}= t('please_donate')
+                    = image_tag("https://storage.ko-fi.com/cdn/cup-border.png")
+                    %span= t('please_donate')
 
   = render 'cookies_eu/consent_banner'
 
